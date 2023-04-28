@@ -1,0 +1,17 @@
+.image {
+  width: 25vw;
+  border-radius: 30%;
+}
+
+@media (max-width: 768px) {
+  .centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+  }
+}
+
+.full-width-hr {
+  width: 100%;
+}

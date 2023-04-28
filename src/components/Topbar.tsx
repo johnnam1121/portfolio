@@ -6,36 +6,46 @@ import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import CottageIcon from '@mui/icons-material/Cottage';
+import { Link } from 'react-router-dom';
 
-export default function DrawerAppBar() {
+export default function Topbar() {
   return (
-    <Box sx={{ display: 'flex'}}>
+    <Box sx={{ flexGrow: '1' }}>
       <CssBaseline />
-      <AppBar position='sticky' component="nav">
-        <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+      <Toolbar>
+        <IconButton
+          size="large"
+          edge="start"
+          color='inherit'
+          aria-label="menu"
+          component={Link} to="/"
+          sx={{ zIndex: '3' }}
+        >
+          <CottageIcon />
+        </IconButton>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+        >
+          John Nam
+        </Typography>
+        <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Button component={Link} to="/About" sx={{ zIndex: 3, color: 'secondary.main', '&:hover': { backgroundColor: 'secondary.dark' } }}>About</Button>
+          <Button component={Link} to="/About" sx={{ zIndex: 3, color: 'secondary.main', '&:hover': { backgroundColor: 'secondary.dark' } }}>test</Button>
+          <Button component={Link} to="/About" sx={{ zIndex: 3, color: 'secondary.main', '&:hover': { backgroundColor: 'secondary.dark' } }}>test</Button>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ ml: 2, zIndex: '3' }}
           >
-            <Button sx={{ color: 'yellow' }}>John Nam</Button>
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Button sx={{ color: 'yellow' }}>Test</Button>
-            <Button sx={{ color: 'yellow' }}>Test</Button>
-            <Button sx={{ color: 'yellow' }}>Test</Button>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ ml: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
+            <MenuIcon />
+          </IconButton>
+        </Box>
+      </Toolbar>
+    </Box >
   );
 }
