@@ -2,8 +2,20 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
 import React from 'react'
 import SlideTransition from './SlideTransition';
+
+const styles = {
+  textDecoration: 'none',
+  '&hover': {
+    
+  }
+};
+
+const StyledLink = styled('a')(() => ({
+  ...styles
+}))
 
 function Projects() {
   return (
@@ -17,27 +29,41 @@ function Projects() {
         <Grid item md={2} />
         <Grid item md={2} />
         <Grid item xs={12} md={8} sx={{ textAlign: 'center', mb: '5vh' }}>
-          <Typography variant="h1" sx={{ mt: '5vh' }}>
-            One Shot Pocha
-          </Typography>
-          <Typography variant="h1" sx={{ mt: '5vh' }}>
-            Live Chat App
-          </Typography>
-          <Typography variant="h1" sx={{ mt: '5vh' }}>
-            Youtube Video Player Clone
-          </Typography>
-          <Typography variant="h1" sx={{ mt: '5vh' }}>
-            Python Job Post Scraper
-          </Typography>
-          <Typography variant="h1" sx={{ mt: '5vh' }}>
-            SC2 Unit Counter
-          </Typography>
-          <Typography variant="h1" sx={{ mt: '5vh' }}>
-            Little Lemon
-          </Typography>
-          <Typography variant="h1" sx={{ mt: '5vh' }}>
-            SIS Newspaper Wordpress
-          </Typography>
+          <StyledLink href="google.com" target='_blank' rel='noopener noreferrer'>
+            <Typography variant="h1">
+              One Shot Pocha
+            </Typography>
+          </StyledLink>
+          <StyledLink href="google.com" target='_blank' rel='noopener noreferrer'>
+            <Typography variant="h1">
+              Live Chat App
+            </Typography>
+          </StyledLink>
+          <StyledLink href="google.com" target='_blank' rel='noopener noreferrer'>
+            <Typography variant="h1">
+              Youtube Video Player Clone
+            </Typography>
+          </StyledLink>
+          <StyledLink href="google.com" target='_blank' rel='noopener noreferrer'>
+            <Typography variant="h1">
+              Python Job Post Scraper
+            </Typography>
+          </StyledLink>
+          <StyledLink href="google.com" target='_blank' rel='noopener noreferrer'>
+            <Typography variant="h1">
+              SC2 Unit Counter
+            </Typography>
+          </StyledLink>
+          <StyledLink href="google.com" target='_blank' rel='noopener noreferrer'>
+            <Typography variant="h1">
+              Little Lemon
+            </Typography>
+          </StyledLink>
+          <StyledLink href="google.com" target='_blank' rel='noopener noreferrer'>
+            <Typography variant="h1">
+              SIS Newspaper Wordpress
+            </Typography>
+          </StyledLink>
         </Grid>
       </Grid>
     </Container>

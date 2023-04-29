@@ -4,10 +4,9 @@ import { useLocation } from 'react-router-dom';
 
 interface FadeTransitionProps {
   children: React.ReactNode;
-  delay?: number;
 }
 
-function FadeTransition({ children, delay = 0 }: FadeTransitionProps) {
+function FadeTransition({ children }: FadeTransitionProps) {
   const location = useLocation();
 
   return (
@@ -17,7 +16,6 @@ function FadeTransition({ children, delay = 0 }: FadeTransitionProps) {
         mountOnEnter
         unmountOnExit
         timeout={{ enter: 1300, exit: 300 }}
-        style={{ transitionDelay: `${delay}ms` }}
       >
         <div style={{ position: 'absolute', width: '100%' }} key={location.pathname}>
           {children}
