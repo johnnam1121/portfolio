@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Landing from '../components/Landing'
 import SideBar from '../components/Sidebar'
 import Topbar from '../components/Topbar'
-import SlideTransition from '../components/SlideTransition'
+import FadeTransition from '../components/FadeTransition'
 import '../pages/Homepage.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -77,7 +77,7 @@ const theme = createTheme({
 
 function Homepage() {
   return (
-    <SlideTransition>
+    <FadeTransition>
       <ThemeProvider theme={theme}>
         <Container maxWidth={false} sx={{ height: '100vh' }} className='area'>
           <Topbar />
@@ -94,7 +94,7 @@ function Homepage() {
           </div>
         </Container>
       </ThemeProvider>
-    </SlideTransition>
+    </FadeTransition>
   );
 }
 

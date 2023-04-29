@@ -16,7 +16,7 @@ function AboutMe() {
         </Grid>
         <Grid item md={2} />
         <Grid item md={2} />
-        <Grid item md={4}>
+        <Grid item xs={12} md={4}>
           <Typography variant="body1">
             After graduating with a Bachelor's in Electrical and Computer Engineering from The University of Texas at Austin, I took quite an unorthodox career path.
             I started my career by opening a business franchise called Schlotzsky's where I learned all the ins and outs of a business.

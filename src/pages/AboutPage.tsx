@@ -5,7 +5,7 @@ import SideBar from '../components/Sidebar'
 import Topbar from '../components/Topbar'
 import '../pages/AboutPage.css'
 import Aboutme from '../components/Aboutme'
-import SlideTransition from '../components/SlideTransition'
+import FadeTransition from '../components/FadeTransition'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -50,7 +50,7 @@ const theme = createTheme({
 
 function AboutPage() {
   return (
-    <SlideTransition>
+    <FadeTransition>
       <ThemeProvider theme={theme}>
         <Container maxWidth={false} sx={{ bgcolor: 'primary.main', minHeight: '100vh' }}>
           <Topbar />
@@ -60,7 +60,7 @@ function AboutPage() {
           <Aboutme />
         </Container>
       </ThemeProvider>
-    </SlideTransition>
+    </FadeTransition>
   )
 }
 

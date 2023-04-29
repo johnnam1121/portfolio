@@ -1,5 +1,6 @@
 import React from 'react';
 import Slide from '@mui/material/Slide';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import { useLocation } from 'react-router-dom';
 
 interface SlideTransitionProps {
@@ -15,7 +16,7 @@ function SlideTransition({ children }: SlideTransitionProps) {
       direction="left"
       mountOnEnter
       unmountOnExit
-      timeout={{ enter: 500, exit: 300 }}
+      timeout={{ enter: 1000, exit: 300 }}
     >
       <div style={{ position: 'absolute', width: '100%' }} key={location.pathname}>
         {children}
