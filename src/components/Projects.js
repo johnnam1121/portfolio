@@ -4,17 +4,7 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import projects from './ProjectsList';
-
-const styles = {
-  textDecoration: 'none',
-  // '&hover': {
-
-  // }
-};
-
-const StyledLink = styled('a')(() => ({
-  ...styles
-}));
+import { Link } from 'react-router-dom';
 
 const transition = {
   type: 'easeIn',
@@ -59,9 +49,9 @@ export default function Projects() {
           >
             {projects.map((item, index) => (
               <motion.div variants={variants} key={index}>
-                <StyledLink href={item.liveLink} target='_blank' rel='noopener noreferrer'>
+                <Link to={item.link} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
                   <Typography variant='h1' sx={{ mt: '3vh' }}>{item.project}</Typography>
-                </StyledLink>
+                </Link>
               </motion.div>
             ))}
           </motion.div>

@@ -1,8 +1,9 @@
 import React from 'react'
 import Topbar from '../components/Topbar'
-import { createTheme, ThemeProvider, Container } from '@mui/material'
+import { createTheme, ThemeProvider, Container, Box } from '@mui/material'
 import Projects from '../components/Projects';
 import SlideTransition from '../components/SlideTransition';
+import SideBar from '../components/Sidebar'
 
 const theme = createTheme({
   palette: {
@@ -46,9 +47,12 @@ function ProjectsPage() {
   return (
     <SlideTransition>
       <ThemeProvider theme={theme}>
-        <Container maxWidth={false} sx={{bgcolor:'primary.main'}}>
+        <Container maxWidth={false} sx={{ bgcolor: 'primary.main' }}>
           <Topbar />
           <Projects />
+          <Box className='remove'>
+            <SideBar />
+          </Box>
         </Container>
       </ThemeProvider>
     </SlideTransition>

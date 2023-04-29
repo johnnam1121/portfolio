@@ -1,7 +1,10 @@
 .image {
   width: 25vw;
   border-radius: 30%;
+  border-style: solid;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 @media (max-width: 768px) {
   .centerImage {

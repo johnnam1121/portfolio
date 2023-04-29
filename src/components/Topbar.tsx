@@ -34,7 +34,7 @@ export default function Topbar() {
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
           <Button component={Link} to="/About" sx={{ zIndex: 3, color: 'secondary.main', '&:hover': { backgroundColor: 'secondary.dark' } }}>About</Button>
           <Button component={Link} to="/Projects" sx={{ zIndex: 3, color: 'secondary.main', '&:hover': { backgroundColor: 'secondary.dark' } }}>Projects</Button>
-          <Button component={Link} to="/About" sx={{ zIndex: 3, color: 'secondary.main', '&:hover': { backgroundColor: 'secondary.dark' } }}>test</Button>
+          <Button component={Link} to="/Experience" sx={{ zIndex: 3, color: 'secondary.main', '&:hover': { backgroundColor: 'secondary.dark' } }}>Experience</Button>
           <IconButton
             size="large"
             edge="start"
