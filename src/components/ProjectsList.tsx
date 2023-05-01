@@ -1,32 +1,32 @@
 const projects = [
   {
     project: 'One Shot Pocha',
-    link: '/about'
+    link: '/OneShotPocha'
   },
   {
     project: 'Live Chat App',
-    link: 'https://google.com'
+    link: '/LiveChatApp'
   },
   {
     project: 'Youtube Video Player Clone',
-    link: 'https://google.com'
+    link: '/YoutubeClone'
   },
   {
     project: 'Python Job Post Scraper',
-    link: 'https://google.com'
+    link: '/JobScraper'
   },
   {
     project: 'SC2 Unit Counter',
-    link: 'https://google.com'
+    link: '/SCUnitCounter'
   },
   {
     project: 'Little Lemon',
-    link: 'https://google.com'
+    link: '/LittleLemon'
   },
-  {
-    project: 'SIS Newspaper Wordpress',
-    link: 'https://google.com'
-  }
+  // {
+  //   project: 'SIS Newspaper Wordpress',
+  //   link: 'https://google.com'
+  // }
 ];
 
 export default projects

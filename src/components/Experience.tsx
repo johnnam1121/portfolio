@@ -1,20 +1,18 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import profile from '../pictures/ProfilePic.jpg';
-import GradPhoto from '../pictures/GradPhoto.jpg';
-import GWCBTOY from '../pictures/GWCBTOY.jpg';
-import Opening from '../pictures/Opening.jpg';
-import '../pages/AboutPage.css';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import Typography from '@mui/material/Typography';
+import '../pages/AboutPage.css';
+import GWCBTOY from '../pictures/GWCBTOY.jpg';
+import GradPhoto from '../pictures/GradPhoto.jpg';
+import Opening from '../pictures/Opening.jpg';
 
 
 export default function Experience() {
   return (
     <Container maxWidth={false}>
-      <Grid container spacing={2} sx={{mb:'5vh'}}>
+      <Grid container spacing={2} sx={{ mb: '5vh' }}>
         <Grid item md={2} />
         <Grid item xs={12} md={8} sx={{ mt: '4vh' }}>
           <Typography variant='h6'>My Experience</Typography>
@@ -121,7 +119,7 @@ export default function Experience() {
         <Grid item xs={12} md={4}>
           <img src={GradPhoto} alt="GradPhoto" className="image centerImage" />
         </Grid>
-        <Grid item md={2}/>
+        <Grid item md={2} />
       </Grid>
     </Container>
   );

@@ -8,7 +8,7 @@ export default function Landing() {
   const subTitleStyle = { textAlign: 'center' };
 
   return (
-    <Box sx={{ flexGrow: 1, zIndex:'2' }}>
+    <Box sx={{ flexGrow: 1, zIndex: '2' }}>
       <Grid container sx={containerStyle}>
         <Grid item xs={false} sm={3} />
         <Grid item xs={12} sm={6}>

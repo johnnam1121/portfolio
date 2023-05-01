@@ -4,6 +4,12 @@ import Homepage from './pages/Homepage';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ExperiencePage from './pages/ExperiencePage';
+import OneShotPocha from './pages/projects/OneShotPocha';
+import LiveChatApp from './pages/projects/LiveChatApp';
+import YoutubeClone from './pages/projects/YoutubeClone';
+import SCUnitCounter from './pages/projects/SCUnitCounter';
+import JobScraper from './pages/projects/JobScraper';
+import LittleLemon from './pages/projects/LittleLemon';
 
 function App() {
   return (
@@ -13,6 +19,13 @@ function App() {
         <Route path="/About" element={<AboutPage />} />
         <Route path="/Projects" element={<ProjectsPage />} />
         <Route path="/Experience" element={<ExperiencePage />} />
+
+        <Route path="/OneShotPocha" element={<OneShotPocha />} />
+        <Route path="/LiveChatApp" element={<LiveChatApp />} />
+        <Route path="/YoutubeClone" element={<YoutubeClone />} />
+        <Route path="/JobScraper" element={<JobScraper />} />
+        <Route path="/SCUnitCounter" element={<SCUnitCounter />} />
+        <Route path="/LittleLemon" element={<LittleLemon />} />
       </Routes>
     </HashRouter>
   );

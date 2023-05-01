@@ -1,12 +1,10 @@
-import { Container, Box } from '@mui/material'
-import { useState, useEffect } from 'react'
-import Landing from '../components/Landing'
+import { Box, Container } from '@mui/material'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import Experience from '../components/Experience'
+import FadeTransition from '../components/FadeTransition'
 import SideBar from '../components/Sidebar'
 import Topbar from '../components/Topbar'
-import FadeTransition from '../components/FadeTransition'
 import '../pages/ExperiencePage.css'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Experience from '../components/Experience'
 
 const theme = createTheme({
   palette: {

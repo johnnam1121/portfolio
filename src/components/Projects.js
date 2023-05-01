@@ -1,10 +1,9 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
-import projects from './ProjectsList';
 import { Link } from 'react-router-dom';
+import projects from './ProjectsList';
 
 const transition = {
   type: 'easeIn',
@@ -49,7 +48,7 @@ export default function Projects() {
           >
             {projects.map((item, index) => (
               <motion.div variants={variants} key={index}>
-                <Link to={item.link} target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
+                <Link to={item.link} style={{ textDecoration: 'none' }}>
                   <Typography variant='h1' sx={{ mt: '3vh' }}>{item.project}</Typography>
                 </Link>
               </motion.div>

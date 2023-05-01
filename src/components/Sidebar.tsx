@@ -1,9 +1,8 @@
-import React from 'react';
-import { Box, Container, Button, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Box, List, ListItem, ListItemIcon } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 
 const styles = {
@@ -28,17 +27,17 @@ function SideBar() {
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><LinkedInIcon sx={styles.icon}/></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><LinkedInIcon sx={styles.icon} /></a>
           </ListItemIcon>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><FacebookIcon sx={styles.icon}/></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><FacebookIcon sx={styles.icon} /></a>
           </ListItemIcon>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><InstagramIcon sx={styles.icon}/></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><InstagramIcon sx={styles.icon} /></a>
           </ListItemIcon>
         </ListItem>
       </List>

@@ -1,9 +1,9 @@
+import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import profile from '../pictures/ProfilePic.jpg';
 import '../pages/AboutPage.css';
+import profile from '../pictures/ProfilePic.jpg';
 
 function AboutMe() {
   return (
@@ -36,7 +36,7 @@ function AboutMe() {
             Lets get in touch!
           </Typography>
           <Button href="mailto: Johnnam93@gmail.com" variant="outlined"
-            sx={{ color: 'secondary.main', borderColor: 'secondary.main', '&:hover': { backgroundColor: 'primary.light' }, display: 'block', ml: 'auto', mr: 'auto', mb: '1vh'}}>
+            sx={{ color: 'secondary.main', borderColor: 'secondary.main', '&:hover': { backgroundColor: 'primary.light' }, display: 'block', ml: 'auto', mr: 'auto', mb: '1vh' }}>
             Contact Me
           </Button>
         </Grid>

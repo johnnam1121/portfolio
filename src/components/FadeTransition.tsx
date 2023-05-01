@@ -10,12 +10,12 @@ function FadeTransition({ children }: FadeTransitionProps) {
   const location = useLocation();
 
   return (
-    <div style={{ backgroundColor: 'pink' }}>
+    <div>
       <Fade
         in
         mountOnEnter
         unmountOnExit
-        timeout={{ enter: 1300, exit: 300 }}
+        timeout={{ enter: 800, exit: 300 }}
       >
         <div style={{ position: 'absolute', width: '100%' }} key={location.pathname}>
           {children}
@@ -26,25 +26,3 @@ function FadeTransition({ children }: FadeTransitionProps) {
 }
 
 export default FadeTransition;
-
-// import { useLocation } from 'react-router-dom';
-// import { Fade } from '@mui/material'
-// import React from 'react'
-
-// function FadeTransition(props) {
-//   const location = useLocation();
-//   return (
-//     <Fade
-//       in
-//       mountOnEnter
-//       unmountOnExit
-//       timeout={{ enter: 1300, exit: 300 }}
-//     >
-//       <div style={{ position: 'absolute', width: '100%' }} key={location.pathname}>
-//         {children}
-//       </div>
-//     </Fade>
-//   )
-// }
-
-// export default FadeTransition

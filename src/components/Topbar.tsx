@@ -1,12 +1,11 @@
+import CottageIcon from '@mui/icons-material/Cottage';
 import MenuIcon from '@mui/icons-material/Menu';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import CottageIcon from '@mui/icons-material/Cottage';
 import { Link } from 'react-router-dom';
 
 export default function Topbar() {
@@ -27,7 +26,7 @@ export default function Topbar() {
         <Typography
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+          sx={{ flexGrow: 1, color: 'secondary.main', display: { xs: "none", sm: "block" } }}
         >
           John Nam
         </Typography>

@@ -1,11 +1,11 @@
-import { Container, Box } from '@mui/material'
-import { useState, useEffect } from 'react'
+import { Box, Container } from '@mui/material'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { useEffect, useState } from 'react'
+import FadeTransition from '../components/FadeTransition'
 import Landing from '../components/Landing'
 import SideBar from '../components/Sidebar'
 import Topbar from '../components/Topbar'
-import FadeTransition from '../components/FadeTransition'
 import '../pages/Homepage.css'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Circle() {
   const [animation, setAnimation] = useState('animate 10s linear infinite');

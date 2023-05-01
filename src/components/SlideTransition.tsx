@@ -1,6 +1,5 @@
-import React from 'react';
 import Slide from '@mui/material/Slide';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 interface SlideTransitionProps {
