@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a118f11e.css",
+    "main.js": "/portfolio/static/js/main.86dafbda.js",
+    "static/js/787.8d4efb73.chunk.js": "/portfolio/static/js/787.8d4efb73.chunk.js",
+    "static/media/starcraft.png": "/portfolio/static/media/starcraft.df2858ae9dbf3408ff46.png",
+    "static/media/Opening.jpg": "/portfolio/static/media/Opening.51bfd14057f9aead39fd.jpg",
+    "static/media/Oneshot.png": "/portfolio/static/media/Oneshot.bfd2cad8a36be9c645c1.png",
+    "static/media/Stars.jpg": "/portfolio/static/media/Stars.6d889bae176969dfdd91.jpg",
+    "static/media/littleLemon.png": "/portfolio/static/media/littleLemon.ac2ed25270fde4081792.png",
+    "static/media/Youtube.png": "/portfolio/static/media/Youtube.8109f0b9dbc1c28ac1a4.png",
+    "static/media/ProfilePic.jpg": "/portfolio/static/media/ProfilePic.7165724f459de7026c31.jpg",
+    "static/media/job scraper.png": "/portfolio/static/media/job scraper.949e047fec2b51aebd72.png",
+    "static/media/GradPhoto.jpg": "/portfolio/static/media/GradPhoto.4c76a76986ca5769548a.jpg",
+    "static/media/GWCBTOY.jpg": "/portfolio/static/media/GWCBTOY.6ec6fdbfa4153dac19c5.jpg",
+    "static/media/chat-app.png": "/portfolio/static/media/chat-app.ae27326157e7b6bf3ce8.png",
+    "index.html": "/portfolio/index.html",
+    "main.a118f11e.css.map": "/portfolio/static/css/main.a118f11e.css.map",
+    "main.86dafbda.js.map": "/portfolio/static/js/main.86dafbda.js.map",
+    "787.8d4efb73.chunk.js.map": "/portfolio/static/js/787.8d4efb73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a118f11e.css",
+    "static/js/main.86dafbda.js"
+  ]
+}
