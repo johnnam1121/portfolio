@@ -22,7 +22,7 @@ function AboutMe() {
             I started my career by opening a business franchise called Schlotzsky's where I learned all the ins and outs of a business.
             After some time, I was encouraged by my sister to pursue teaching which is where I am now. I've been teaching computer science for about 3 years now and am enjoying it very much!
             However, I am looking to move out of teaching to pursue a career in tech; ideally in front-end development. I've been teaching mostly front-end development and have found much joy
-            in working on some projects on my own. I am open to other positions as well though since my main goal is to learn and develop my skills.\
+            in working on some projects on my own. I am open to other positions as well though since my main goal is to learn and develop my skills.
             If you'd like to chat, please feel free to reach out using the contact me section at the bottom of the page!
           </Typography>
         </Grid>

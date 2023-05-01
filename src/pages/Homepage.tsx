@@ -48,7 +48,10 @@ const theme = createTheme({
     fontFamily: 'Quicksand',
     h1: {
       color: '#34363A',
-      fontSize: '10vh'
+      fontSize: '10vh',
+      '@media (max-width: 768px)': {
+        fontSize: '10vw',
+      },
     },
     h2: {
       color: 'blue',
@@ -64,7 +67,11 @@ const theme = createTheme({
     },
     h6: {
       color: '#807E79',
-      fontSize: '3vh'
+      fontSize: '3vh',
+      '@media (max-width: 768px)': {
+        fontSize: '3vw',
+      },
+
     },
     body1: {
       color: '#807E79',
@@ -79,7 +86,7 @@ function Homepage() {
   return (
     <FadeTransition>
       <ThemeProvider theme={theme}>
-        <Container maxWidth={false} sx={{ height: '100vh' }} className='area'>
+        <Container maxWidth={false} sx={{ minHeight: '100vh' }} className='area'>
           <Topbar />
           <Landing />
           <Box className='remove'>
