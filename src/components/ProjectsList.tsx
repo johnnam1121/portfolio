@@ -1,27 +1,33 @@
 const projects = [
   {
     project: 'One Shot Pocha',
-    link: '/OneShotPocha'
+    link: '/OneShotPocha',
+    tooltip: 'Website for One Shot Pocha Korean Karaoke Restaurant'
   },
   {
     project: 'Live Chat App',
-    link: '/LiveChatApp'
+    link: '/LiveChatApp',
+    tooltip: 'Real time chat app using SocketIO and Node.js'
   },
   {
     project: 'Youtube Video Player Clone',
-    link: '/YoutubeClone'
+    link: '/YoutubeClone',
+    tooltip: 'Youtube like clone made using react and bootstrap'
   },
   {
     project: 'Python Job Post Scraper',
-    link: '/JobScraper'
+    link: '/JobScraper',
+    tooltip: 'Job post website scraper made using Python to find jobs from specific companies using keywords'
   },
   {
     project: 'SC2 Unit Counter',
-    link: '/SCUnitCounter'
+    link: '/SCUnitCounter',
+    tooltip: 'Unit counter cheatsheet for the game starcraft 2'
   },
   {
     project: 'Little Lemon',
-    link: '/LittleLemon'
+    link: '/LittleLemon',
+    tooltip: 'Website with a reservation system using for Meta (Facebook) certification'
   },
   // {
   //   project: 'SIS Newspaper Wordpress',

@@ -1,6 +1,8 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
+import Zoom from '@mui/material/Zoom';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import projects from './ProjectsList';
@@ -48,9 +50,11 @@ export default function Projects() {
           >
             {projects.map((item, index) => (
               <motion.div variants={variants} key={index}>
-                <Link to={item.link} style={{ textDecoration: 'none' }}>
-                  <Typography variant='h1' sx={{ mt: '3vh' }}>{item.project}</Typography>
-                </Link>
+                <Tooltip title={item.tooltip} placement="top" arrow TransitionComponent={Zoom} followCursor >
+                  <Link to={item.link} style={{ textDecoration: 'none' }}>
+                    <Typography variant='h1' sx={{ mt: '3vh' }}>{item.project}</Typography>
+                  </Link>
+                </Tooltip>
               </motion.div>
             ))}
           </motion.div>

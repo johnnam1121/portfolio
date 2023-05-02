@@ -87,8 +87,7 @@ export default function Topbar() {
                     top: 0,
                     right: 14,
                     width: 10,
-                    height:
-                      10,
+                    height: 10,
                     backgroundColor: 'white',
                     transform: 'translateY(-50%) rotate(45deg)',
                     zIndex: 0,

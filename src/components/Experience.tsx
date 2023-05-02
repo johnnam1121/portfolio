@@ -49,7 +49,6 @@ export default function Experience() {
               Mentor to-be teachers through the alternative certification process
             </ListItem>
           </List>
-          <hr />
         </Grid>
         <Grid item xs={12} md={4}>
           <img src={GWCBTOY} alt="GWCBTOY" className="image centerImage" />
@@ -58,6 +57,7 @@ export default function Experience() {
         {/* SCS Deli */}
         <Grid item md={2} />
         <Grid item xs={12} md={4}>
+        <hr />
           <Typography variant="h6">
             SCS Deli LLC/Schlotzsky's
           </Typography>
@@ -85,7 +85,6 @@ export default function Experience() {
               Increased sales by over 20% by organizing catering and third-party deliveries
             </ListItem>
           </List>
-          <hr />
         </Grid>
         <Grid item xs={12} md={4}>
           <img src={Opening} alt="Opening" className="image centerImage" />
@@ -94,6 +93,7 @@ export default function Experience() {
         {/* UT Austin */}
         <Grid item md={2} />
         <Grid item xs={12} md={4}>
+        <hr />
           <Typography variant="h6">
             The Univeresity of Texas at Austin
           </Typography>

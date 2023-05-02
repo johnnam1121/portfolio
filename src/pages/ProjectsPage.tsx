@@ -17,7 +17,11 @@ const theme = createTheme({
     fontFamily: 'Quicksand',
     h1: {
       color: '#aeaeae',
-      fontSize: '5vw'
+      fontSize: '5vw',
+      '@media (max-width: 768px)': {
+        fontSize: '10vw',
+      },
+
     },
     h2: {
       color: 'blue',

@@ -71,7 +71,7 @@ const SCUnitCounter = () => {
                   <Typography variant='h5'>One of the games I enjoy playing is SC2</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Since I stuggle with unit composition in the game, I wanted to make a visual, interactive cheatsheet The webapp contains a units list page, a individual unit counter page that the player can interact with, and a team composition page to counter common team compositions</Typography>
+                  <Typography variant='h5'>Since I struggle with unit composition in the game, I wanted to make a visual, interactive cheatsheet The webapp contains a units list page, a individual unit counter page that the player can interact with, and a team composition page to counter common team compositions</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
                   <Typography variant='h5'>The content and images were sourced from Carbot Animations, Liquidpedia, Osiris SC2 Guide, and from the game SC2 itself</Typography>
