@@ -59,6 +59,9 @@ export default function Projects() {
             ))}
           </motion.div>
         </Grid>
+        <Grid xs={12} md={12} sx={{ textAlign: 'center' }}>
+          <Typography variant='body2'>©2023 John Nam. All Rights Reserved. </Typography>
+        </Grid>
       </Grid>
     </Container>
   )

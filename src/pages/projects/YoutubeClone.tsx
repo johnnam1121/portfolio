@@ -4,6 +4,7 @@ import { Box, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import FadeTransition from '../../components/FadeTransition';
+import Footer from '../../components/Footer';
 import Topbar from '../../components/Topbar';
 import Youtube from '../../pictures/projectImages/Youtube.png';
 
@@ -51,7 +52,7 @@ const YoutubeClone = () => {
               <Typography variant='h1' sx={{ textAlign: 'center' }}>Youtube Clone </Typography>
               <hr className='full-width-hr' />
               <Typography variant='h5'>Current Project</Typography>
-              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/ignwebapp' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#807E79' }}>here</Link></Typography>
+              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/ignwebapp' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#000000', fontWeight: 'bold' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>
                 <img src={Youtube} alt="oneshot image" style={{ width: '100%' }} />
               </Box>
@@ -81,6 +82,7 @@ const YoutubeClone = () => {
               </Box>
             </Grid>
           </Grid>
+          <Footer />
         </Container>
       </FadeTransition>
     </ThemeProvider>

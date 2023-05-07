@@ -4,6 +4,7 @@ import { Box, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import FadeTransition from '../../components/FadeTransition';
+import Footer from '../../components/Footer';
 import Topbar from '../../components/Topbar';
 import JobScraperPic from '../../pictures/projectImages/job scraper.png';
 
@@ -51,7 +52,7 @@ const JobScraper = () => {
             <Grid item xs={10} md={10} sx={{ mt: '4vh' }}>
               <Typography variant='h1' sx={{ textAlign: 'center' }}>Job Post Scraper </Typography>
               <hr className='full-width-hr' />
-              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/job-post-scraper' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#818988' }}>here</Link></Typography>
+              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/job-post-scraper' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#eeeeee', fontWeight: 'bold' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>
                 <img src={JobScraperPic} alt="oneshot image" style={{ width: '100%' }} />
               </Box>
@@ -89,6 +90,7 @@ const JobScraper = () => {
               </Box>
             </Grid>
           </Grid>
+          <Footer />
         </Container>
       </FadeTransition>
     </ThemeProvider>

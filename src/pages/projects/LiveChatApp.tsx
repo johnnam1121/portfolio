@@ -4,36 +4,37 @@ import { Box, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import FadeTransition from '../../components/FadeTransition';
+import Footer from '../../components/Footer';
 import Topbar from '../../components/Topbar';
-import ChatApp from '../../pictures/projectImages/chat-app.png';
+import ChatApp from '../../pictures/projectImages/LoginPage.png';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#e5e5e5',
+      main: '#AAC4FF',
     },
     secondary: {
-      main: '#807E79',
+      main: '#EEF1FF',
     },
   },
   typography: {
     fontFamily: 'Quicksand',
     h1: {
-      color: '#807E79',
+      color: '#EEF1FF',
       fontSize: '12vh',
       '@media (max-width: 768px)': {
         fontSize: '10vw',
       },
     },
     h5: {
-      color: '#807E79',
+      color: '#EEF1FF',
     },
     h6: {
-      color: '#807E79',
+      color: '#EEF1FF',
       fontSize: '3vh'
     },
     body1: {
-      color: '#807E79',
+      color: '#EEF1FF',
       fontSize: '2.3vh'
     },
   },
@@ -50,40 +51,39 @@ const LiveChatApp = () => {
             <Grid item xs={10} md={10} sx={{ mt: '4vh' }}>
               <Typography variant='h1' sx={{ textAlign: 'center' }}>Live Chat App </Typography>
               <hr className='full-width-hr' />
-              <Typography variant='h5'>Current Project</Typography>
-              {/* <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/one-shot-pocha' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#807E79' }}>here</Link></Typography> */}
+              <Typography variant='h5'>Live Chat App</Typography>
+              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/chat-app' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#B1B2FF', fontWeight: 'bold' }}>here</Link></Typography>
+              <Typography variant='h6'>View live app <Link to='https://github.com/johnnam1121/chat-app' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#B1B2FF', fontWeight: 'bold' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>
                 <img src={ChatApp} alt="oneshot image" style={{ width: '100%' }} />
               </Box>
               <List sx={{ paddingLeft: '15px', mt: '5vh', listStyleType: 'disc' }}>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>The goal of this is to create a real time chat application from scratch using react for the client side and nodejs for the server side.</Typography>
+                  <Typography variant='h5'>Created a live chat app that can be opened on multiple browsers to communicate instantly like Facebook Messanger.</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>I am using react so I can deploy it using gh-pages eventually. </Typography>
+                  <Typography variant='h5'>Front end was created using React and Material UI and is deployed using Gh-pages Back end was made using Node.js, Express, SocketIO, and Cors and it is deployed using Railway</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>For the back end, I am using express to create the server and socket.IO to communicate between the client and server. I am doing this to also get some practice using Nodejs. </Typography>
+                  <Typography variant='h5'>Some features include room specific messaging, dark mode, active users list, and connect and disconnect greetings.</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>I am honestly kind of struggling with it since majority of the tutorials make no sense and are too complex. I am trying to make it easier on myself by starting from the beginning and breaking it up into managable chunks. So far I got the client and server side communicating with each other. I finished the active users section and am starting to build the chat function. Breaking up the users into rooms is a little over my head right now so I will work on that after I finish the chat function. </Typography>
-                </ListItem>
-                <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Once the backend is complete, I will make the app look pretty which is the easy part imo.</Typography>
+                  <Typography variant='h5'>This was the first app I was able to deploy both a front end and back end and successfully connect them together.</Typography>
                 </ListItem>
               </List>
               <Box style={{ position: 'fixed', left: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/OneShotPocha' style={{ textDecoration: 'none', color: '#807E79' }}>
+                <Link to='/OneShotPocha' style={{ textDecoration: 'none', color: '#EEF1FF' }}>
                   <ArrowBackIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>
               <Box style={{ position: 'fixed', right: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/YoutubeClone' style={{ textDecoration: 'none', color: '#807E79' }}>
+                <Link to='/YoutubeClone' style={{ textDecoration: 'none', color: '#EEF1FF' }}>
                   <ArrowForwardIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>
             </Grid>
           </Grid>
+          <Footer />
         </Container>
       </FadeTransition>
     </ThemeProvider>

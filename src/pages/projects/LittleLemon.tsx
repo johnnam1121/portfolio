@@ -4,6 +4,7 @@ import { Box, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import FadeTransition from '../../components/FadeTransition';
+import Footer from '../../components/Footer';
 import Topbar from '../../components/Topbar';
 import littleLemon from '../../pictures/projectImages/littleLemon.png';
 
@@ -50,8 +51,8 @@ const LittleLemon = () => {
             <Grid item xs={10} md={10} sx={{ mt: '4vh' }}>
               <Typography variant='h1' sx={{ textAlign: 'center' }}>Little Lemon </Typography>
               <hr className='full-width-hr' />
-              <Typography variant='h6'>View live page <Link to='https://johnnam1121.github.io/littleLemon/' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#4D5C55' }}>here</Link></Typography>
-              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/littleLemon' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#4D5C55' }}>here</Link></Typography>
+              <Typography variant='h6'>View live page <Link to='https://johnnam1121.github.io/littleLemon/' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#e3bf03', fontWeight: 'bold' }}>here</Link></Typography>
+              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/littleLemon' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#e3bf03', fontWeight: 'bold' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>
                 <img src={littleLemon} alt="oneshot image" style={{ width: '100%' }} />
               </Box>
@@ -78,6 +79,7 @@ const LittleLemon = () => {
               </Box>
             </Grid>
           </Grid>
+          <Footer />
         </Container>
       </FadeTransition>
     </ThemeProvider>

@@ -4,6 +4,7 @@ import { Box, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import FadeTransition from '../../components/FadeTransition';
+import Footer from '../../components/Footer';
 import Topbar from '../../components/Topbar';
 import starcraft from '../../pictures/projectImages/starcraft.png';
 
@@ -61,8 +62,8 @@ const SCUnitCounter = () => {
             <Grid item xs={10} md={10} sx={{ mt: '4vh' }}>
               <Typography variant='h1' sx={{ textAlign: 'center' }}>SC2 Unit Counter </Typography>
               <hr className='full-width-hr' />
-              <Typography variant='h6'>View live page <Link to='https://johntrieseverything.github.io/starcraft2-unit-counter/' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#ADD8E6' }}>here</Link></Typography>
-              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/starcraft2-unit-counter' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#ADD8E6' }}>here</Link></Typography>
+              <Typography variant='h6'>View live page <Link to='https://johntrieseverything.github.io/starcraft2-unit-counter/' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#eeeeee', fontWeight: 'bold' }}>here</Link></Typography>
+              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/starcraft2-unit-counter' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#eeeeee', fontWeight: 'bold' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>
                 <img src={starcraft} alt="oneshot image" style={{ width: '100%' }} />
               </Box>
@@ -89,6 +90,7 @@ const SCUnitCounter = () => {
               </Box>
             </Grid>
           </Grid>
+          <Footer />
         </Container>
       </FadeTransition>
     </ThemeProvider>

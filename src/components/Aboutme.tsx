@@ -1,4 +1,5 @@
-import Button from '@mui/material/Button';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -31,14 +32,15 @@ function AboutMe() {
         </Grid>
         <Grid item md={2} />
         <Grid item md={2} />
-        <Grid item xs={12} md={8} sx={{ textAlign: 'center', mt: '7vh' }}>
-          <Typography variant="h6">
-            Lets get in touch!
-          </Typography>
-          <Button href="mailto: Johnnam93@gmail.com" variant="outlined"
-            sx={{ color: 'secondary.main', borderColor: 'secondary.main', '&:hover': { backgroundColor: 'primary.light' }, display: 'block', ml: 'auto', mr: 'auto', mb: '1vh' }}>
-            Contact Me
-          </Button>
+        <Grid item xs={12} md={8} sx={{ mb: '3vh' }}>
+          <Typography variant="h6" sx={{ mt: '3vh' }}>Lets get in touch!</Typography>
+          <hr className='full-width-hr' />
+          <Typography variant="body1"><EmailIcon /> Johnnam93@gmail.com</Typography>
+          <Typography variant="body1"><PhoneAndroidIcon /> Work phone 832-384-4331 </Typography>
+        </Grid>
+        <Grid item md={2} />
+        <Grid xs={12} md={12} sx={{ textAlign: 'center' }}>
+          <Typography variant='body2'>©2023 John Nam. All Rights Reserved. </Typography>
         </Grid>
       </Grid>
     </Container>

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import FadeTransition from '../../components/FadeTransition';
 import Topbar from '../../components/Topbar';
 import OneShot from '../../pictures/projectImages/Oneshot.png';
+import Footer from '../../components/Footer';
 
 const theme = createTheme({
   palette: {
@@ -78,6 +79,7 @@ const OnesShotPocha = () => {
               </Box>
             </Grid>
           </Grid>
+          <Footer />
         </Container>
       </FadeTransition>
     </ThemeProvider>

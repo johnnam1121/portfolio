@@ -12,7 +12,7 @@ import Opening from '../pictures/Opening.jpg';
 export default function Experience() {
   return (
     <Container maxWidth={false}>
-      <Grid container spacing={2} sx={{ mb: '5vh' }}>
+      <Grid container spacing={2}>
         <Grid item md={2} />
         <Grid item xs={12} md={8} sx={{ mt: '4vh' }}>
           <Typography variant='h6'>My Experience</Typography>
@@ -57,7 +57,7 @@ export default function Experience() {
         {/* SCS Deli */}
         <Grid item md={2} />
         <Grid item xs={12} md={4}>
-        <hr />
+          <hr />
           <Typography variant="h6">
             SCS Deli LLC/Schlotzsky's
           </Typography>
@@ -93,7 +93,7 @@ export default function Experience() {
         {/* UT Austin */}
         <Grid item md={2} />
         <Grid item xs={12} md={4}>
-        <hr />
+          <hr />
           <Typography variant="h6">
             The Univeresity of Texas at Austin
           </Typography>
@@ -120,6 +120,9 @@ export default function Experience() {
           <img src={GradPhoto} alt="GradPhoto" className="image centerImage" />
         </Grid>
         <Grid item md={2} />
+        <Grid xs={12} md={12} sx={{ textAlign: 'center', mt:'5vh' }}>
+          <Typography variant='body2'>©2023 John Nam. All Rights Reserved. </Typography>
+        </Grid>
       </Grid>
     </Container>
   );

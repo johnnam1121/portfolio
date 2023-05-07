@@ -1,13 +1,14 @@
 const projects = [
-  {
-    project: 'One Shot Pocha',
-    link: '/OneShotPocha',
-    tooltip: 'Website for One Shot Pocha Korean Karaoke Restaurant'
-  },
+
   {
     project: 'Live Chat App',
     link: '/LiveChatApp',
     tooltip: 'Real time chat app using SocketIO and Node.js'
+  },
+  {
+    project: 'One Shot Pocha',
+    link: '/OneShotPocha',
+    tooltip: 'Website for One Shot Pocha Korean Karaoke Restaurant'
   },
   {
     project: 'Youtube Video Player Clone',
