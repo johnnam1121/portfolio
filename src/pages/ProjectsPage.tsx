@@ -14,7 +14,6 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Quicksand',
     h1: {
       color: '#aeaeae',
       fontSize: '5vw',
@@ -50,7 +49,7 @@ function ProjectsPage() {
   return (
     <SlideTransition>
       <ThemeProvider theme={theme}>
-        <Container maxWidth={false} sx={{ bgcolor: 'primary.main', minHeight:'100vh' }}>
+        <Container maxWidth={false} sx={{ bgcolor: 'primary.main', minHeight: '100vh' }}>
           <Topbar />
           <Projects />
           <Box className='remove'>

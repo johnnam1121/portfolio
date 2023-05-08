@@ -16,7 +16,6 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Quicksand',
     h1: {
       color: '#34363A',
       fontSize: '10vh'

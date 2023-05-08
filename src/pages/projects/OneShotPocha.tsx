@@ -4,9 +4,9 @@ import { Box, Container, Grid, List, ListItem, Typography } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import FadeTransition from '../../components/FadeTransition';
+import Footer from '../../components/Footer';
 import Topbar from '../../components/Topbar';
 import OneShot from '../../pictures/projectImages/Oneshot.png';
-import Footer from '../../components/Footer';
 
 const theme = createTheme({
   palette: {
@@ -18,7 +18,6 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Quicksand',
     h1: {
       color: '#ffebcd',
       fontSize: '12vh',

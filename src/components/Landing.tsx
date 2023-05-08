@@ -5,10 +5,10 @@ import Typography from '@mui/material/Typography';
 export default function Landing() {
   const containerStyle = { height: '80vh', display: 'flex', alignItems: 'center' };
   const titleStyle = { textAlign: 'center', display: 'flex', alignItems: 'center', marginBottom: '2rem' };
-  const subTitleStyle = { textAlign: 'center' };
+  const subTitleStyle = { textAlign: 'center', zIndex:'30'};
 
   return (
-    <Box sx={{ flexGrow: 1, zIndex: '2' }}>
+    <Box sx={{ flexGrow: 1, zIndex: '3' }}>
       <Grid container sx={containerStyle}>
         <Grid item xs={false} sm={3} />
         <Grid item xs={12} sm={6}>
@@ -18,7 +18,7 @@ export default function Landing() {
             I like to design and develop web apps
           </Typography>
           <Typography variant="h6" sx={subTitleStyle}>
-            Computer Science Teacher <hr /><>&gt;</> Front-End Developer
+            Made using React and Material UI
           </Typography>
         </Grid>
         <Grid item xs={false} sm={3} />

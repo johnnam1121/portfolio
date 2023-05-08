@@ -24,7 +24,7 @@ function AboutMe() {
             After some time, I was encouraged by my sister to pursue teaching which is where I am now. I've been teaching computer science for about 3 years now and am enjoying it very much!
             However, I am looking to move out of teaching to pursue a career in tech; ideally in front-end development. I've been teaching mostly front-end development and have found much joy
             in working on some projects on my own. I am open to other positions as well though since my main goal is to learn and develop my skills.<br />
-            If you'd like to chat, please feel free to reach out using the contact me section at the bottom of the page!
+            Check out my <a style={{ color: '#e5e5e5' }} href="https://github.com/johnnam1121">stuff</a>!
           </Typography>
         </Grid>
         <Grid item xs={12} md={4}>
@@ -39,7 +39,7 @@ function AboutMe() {
           <Typography variant="body1"><PhoneAndroidIcon /> Work phone 832-384-4331 </Typography>
         </Grid>
         <Grid item md={2} />
-        <Grid xs={12} md={12} sx={{ textAlign: 'center' }}>
+        <Grid xs={12} md={12} sx={{ textAlign: 'center', mt:'5vh' }}>
           <Typography variant='body2'>©2023 John Nam. All Rights Reserved. </Typography>
         </Grid>
       </Grid>
