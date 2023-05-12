@@ -57,20 +57,20 @@ const YoutubeClone = () => {
               </Box>
               <List sx={{ paddingLeft: '15px', mt: '5vh', listStyleType: 'disc' }}>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>IGNs API has a CORS restriction so I have my program check if the user can access the API. If not, it shows this page which redirects to another page that grants temporary access</Typography>
+                  <Typography variant='h6'>IGNs API has a CORS restriction so I have my program check if the user can access the API. If not, it shows this page which redirects to another page that grants temporary access</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Has a main video player which includes a title, description, and tags</Typography>
+                  <Typography variant='h6'>Has a main video player which includes a title, description, and tags</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>On the right is a suggested video playlist An accordian which shows a load more list of suggested videos was implemented</Typography>
+                  <Typography variant='h6'>On the right is a suggested video playlist An accordian which shows a load more list of suggested videos was implemented</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Some features include, on click - play selected video, on video over - play next video, on hover-scale suggested video for user friendlyness</Typography>
+                  <Typography variant='h6'>Some features include, on click - play selected video, on video over - play next video, on hover-scale suggested video for user friendlyness</Typography>
                 </ListItem>
               </List>
               <Box style={{ position: 'fixed', left: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/LiveChatApp' style={{ textDecoration: 'none', color: '#807E79' }}>
+                <Link to='/OneShotPocha' style={{ textDecoration: 'none', color: '#807E79' }}>
                   <ArrowBackIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>

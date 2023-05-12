@@ -57,22 +57,22 @@ const OnesShotPocha = () => {
               </Box>
               <List sx={{ paddingLeft: '15px', mt: '5vh', listStyleType: 'disc' }}>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Created a website for a friends restaurant/karaoke bar using react and bootstrap</Typography>
+                  <Typography variant='h6'>Created a website for a local restaurant/karaoke bar using react and bootstrap</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>For the gallery and reservations, I thought about making some backend servers but I wanted the website to be as simple as possible and static so it is easy for my friend to manage. </Typography>
+                  <Typography variant='h6'>For the gallery and reservations, I thought about making some backend servers but I wanted the website to be as simple as possible and static so it is easy for my friend to manage. </Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>The only part that uses a backend is the contact/email section which uses formspree as the api. The reservation section uses Calendy as a component so I didnt have to make a backend.</Typography>
+                  <Typography variant='h6'>The only part that uses a backend is the contact/email section which uses formspree as the api. The reservation section uses Calendy as a component so I didnt have to make a backend.</Typography>
                 </ListItem>
               </List>
               <Box style={{ position: 'fixed', left: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/LittleLemon' style={{ textDecoration: 'none', color: '#006a4e' }}>
+                <Link to='/LiveChatApp' style={{ textDecoration: 'none', color: '#006a4e' }}>
                   <ArrowBackIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>
               <Box style={{ position: 'fixed', right: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/LiveChatApp' style={{ textDecoration: 'none', color: '#006a4e' }}>
+                <Link to='/YoutubeClone' style={{ textDecoration: 'none', color: '#006a4e' }}>
                   <ArrowForwardIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>

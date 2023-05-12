@@ -11,7 +11,7 @@ import JobScraperPic from '../../pictures/projectImages/job scraper.png';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1C1E13',
+      main: '#333333',
     },
     secondary: {
       main: '#818988',
@@ -57,22 +57,22 @@ const JobScraper = () => {
               </Box>
               <List sx={{ paddingLeft: '15px', mt: '5vh', listStyleType: 'disc' }}>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Job post website scraper using python and beautifulsoup4 and selenium to run some scripts.</Typography>
+                  <Typography variant='h6'>Job post website scraper using python and beautifulsoup4 and selenium to run some scripts.</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>The goal is to have the program search through specific website of some companies websites and find jobs that are relevant to me to apply to.
+                  <Typography variant='h6'>The goal is to have the program search through specific website of some companies websites and find jobs that are relevant to me to apply to.
                     It will search job titles based on some keywords and print the title, location, and link to apply.
                     This is more efficient for me than scanning through indeed or linkedin which has a lot of unrelated/spammy jobs.</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>
+                  <Typography variant='h6'>
                     Each python file is made specifically for each job site since each site uses different html names and etc.
                     Therefore, I made a batch file which will run all the python files at once.
                     Once I get each python file set up for all the companies I would like to work for, I will add a feature to save the printed info into a csv file for ease of use.
                   </Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>
+                  <Typography variant='h6'>
                     Also, I will try to add a feature where it runs daily at 8am. No idea how I would start that though...
                   </Typography>
                 </ListItem>

@@ -11,29 +11,29 @@ import ChatApp from '../../pictures/projectImages/LoginPage.png';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#AAC4FF',
+      main: '#e3e3e3',
     },
     secondary: {
-      main: '#EEF1FF',
+      main: '#555555',
     },
   },
   typography: {
     h1: {
-      color: '#EEF1FF',
+      color: '#9090dd',
       fontSize: '12vh',
       '@media (max-width: 768px)': {
         fontSize: '10vw',
       },
     },
     h5: {
-      color: '#EEF1FF',
+      color: '#555555',
     },
     h6: {
-      color: '#EEF1FF',
+      color: '#555555',
       fontSize: '3vh'
     },
     body1: {
-      color: '#EEF1FF',
+      color: '#555555',
       fontSize: '2.3vh'
     },
   },
@@ -52,31 +52,31 @@ const LiveChatApp = () => {
               <hr className='full-width-hr' />
               <Typography variant='h5'>Live Chat App</Typography>
               <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/chat-app' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#9090dd', fontWeight: 'bold' }}>here</Link></Typography>
-              <Typography variant='h6'>View live app <Link to='https://github.com/johnnam1121/chat-app' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#9090dd', fontWeight: 'bold' }}>here</Link></Typography>
+              <Typography variant='h6'>View live app <Link to='https://johnnam1121.github.io/chat-app' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#9090dd', fontWeight: 'bold' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>
                 <img src={ChatApp} alt="oneshot image" style={{ width: '100%' }} />
               </Box>
               <List sx={{ paddingLeft: '15px', mt: '5vh', listStyleType: 'disc' }}>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Created a live chat app that can be opened on multiple browsers to communicate instantly like Facebook Messanger.</Typography>
+                  <Typography variant='h6'>Created a live chat app that can be opened on multiple browsers to communicate instantly like Facebook Messanger.</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Front end was created using React and Material UI and is deployed using Gh-pages Back end was made using Node.js, Express, SocketIO, and Cors and it is deployed using Railway</Typography>
+                  <Typography variant='h6'>Front end was created using React and Material UI and is deployed using Gh-pages Back end was made using Node.js, Express, SocketIO, and Cors and it is deployed using Railway</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Some features include room specific messaging, dark mode, active users list, and connect and disconnect greetings.</Typography>
+                  <Typography variant='h6'>Some features include room specific messaging, dark mode, active users list, and connect and disconnect greetings.</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>This was the first app I was able to deploy both a front end and back end and successfully connect them together.</Typography>
+                  <Typography variant='h6'>This was the first app I was able to deploy both a front end and back end and successfully connect them together.</Typography>
                 </ListItem>
               </List>
               <Box style={{ position: 'fixed', left: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/OneShotPocha' style={{ textDecoration: 'none', color: '#EEF1FF' }}>
+                <Link to='/TherapyAlliance' style={{ textDecoration: 'none', color: '#555555' }}>
                   <ArrowBackIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>
               <Box style={{ position: 'fixed', right: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/YoutubeClone' style={{ textDecoration: 'none', color: '#EEF1FF' }}>
+                <Link to='/OneShotPocha' style={{ textDecoration: 'none', color: '#555555' }}>
                   <ArrowForwardIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>

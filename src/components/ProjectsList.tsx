@@ -1,6 +1,11 @@
 const projects = [
 
   {
+    project: 'Therapy Alliance',
+    link: '/TherapyAlliance',
+    tooltip: 'Website created for local Therapy Recruiting Company'
+  },
+  {
     project: 'Live Chat App',
     link: '/LiveChatApp',
     tooltip: 'Real time chat app using SocketIO and Node.js'

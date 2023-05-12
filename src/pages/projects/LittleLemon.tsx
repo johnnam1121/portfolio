@@ -57,13 +57,13 @@ const LittleLemon = () => {
               </Box>
               <List sx={{ paddingLeft: '15px', mt: '5vh', listStyleType: 'disc' }}>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Created using the fake clients requirements through Metas certification course for front-end development</Typography>
+                  <Typography variant='h6'>Created using the fake clients requirements through Metas certification course for front-end development</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>Some of the requirements were to develop a home page and a reservation page The reservation form requires client-side validation before submitting</Typography>
+                  <Typography variant='h6'>Some of the requirements were to develop a home page and a reservation page The reservation form requires client-side validation before submitting</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h5'>The layout of the website was created using Figma.</Typography>
+                  <Typography variant='h6'>The layout of the website was created using Figma.</Typography>
                 </ListItem>
               </List>
               <Box style={{ position: 'fixed', left: '2%', top: '50%', transform: 'translateY(-50%)' }}>
@@ -72,7 +72,7 @@ const LittleLemon = () => {
                 </Link>
               </Box>
               <Box style={{ position: 'fixed', right: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/OneShotPocha' style={{ textDecoration: 'none', color: '#4D5C55' }}>
+                <Link to='/TherapyAlliance' style={{ textDecoration: 'none', color: '#4D5C55' }}>
                   <ArrowForwardIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>

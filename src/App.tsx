@@ -10,6 +10,7 @@ import YoutubeClone from './pages/projects/YoutubeClone';
 import SCUnitCounter from './pages/projects/SCUnitCounter';
 import JobScraper from './pages/projects/JobScraper';
 import LittleLemon from './pages/projects/LittleLemon';
+import TherapyAlliance from './pages/projects/TherapyAlliance';
 
 function App() {
   return (
@@ -20,12 +21,14 @@ function App() {
         <Route path="/Projects" element={<ProjectsPage />} />
         <Route path="/Experience" element={<ExperiencePage />} />
 
+        <Route path="/TherapyAlliance" element={<TherapyAlliance />} />
         <Route path="/OneShotPocha" element={<OneShotPocha />} />
         <Route path="/LiveChatApp" element={<LiveChatApp />} />
         <Route path="/YoutubeClone" element={<YoutubeClone />} />
         <Route path="/JobScraper" element={<JobScraper />} />
         <Route path="/SCUnitCounter" element={<SCUnitCounter />} />
         <Route path="/LittleLemon" element={<LittleLemon />} />
+        
       </Routes>
     </HashRouter>
   );
