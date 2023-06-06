@@ -50,20 +50,26 @@ const TherapyAlliance = () => {
             <Grid item xs={10} md={10} sx={{ mt: '4vh' }}>
               <Typography variant='h1' sx={{ textAlign: 'center' }}>Therapy Alliance</Typography>
               <hr className='full-width-hr' />
-              <Typography variant='h6'>View live page <Link to='https://johnnam1121.github.io/therapy-alliance/' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#f36523' }}>here</Link></Typography>
-              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/therapy-alliance' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#f36523' }}>here</Link></Typography>
+              <Typography variant='h6'>View live page <Link to='https://tdtherapyalliance.com/' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#f36523' }}>here</Link></Typography>
+              <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/therapy-alliance-nextjs' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#f36523' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>
                 <img src={thearpyAlliance} alt="thearpyAlliance Home Page" style={{ width: '100%' }} />
               </Box>
               <List sx={{ paddingLeft: '15px', mt: '5vh', listStyleType: 'disc' }}>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h6'>Created a website for a local therapy recruiting company using React and Material UI</Typography>
+                  <Typography variant='h6'>Created a website for a local therapy recruiting company using Nextjs and Material UI</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
                   <Typography variant='h6'>Used Figma to create the design and color theme for the website</Typography>
                 </ListItem>
                 <ListItem sx={{ display: 'list-item' }}>
-                  <Typography variant='h6'>Still currently working on the website. Need more assets from the client so I can replace the stock photos with theirs eventually.</Typography>
+                  <Typography variant='h6'>Was originally built using react but switched it to nextjs for SEO.</Typography>
+                </ListItem>
+                <ListItem sx={{ display: 'list-item' }}>
+                  <Typography variant='h6'>Deployed the website using Netlify with a custom domain from google domains.</Typography>
+                </ListItem>
+                <ListItem sx={{ display: 'list-item' }}>
+                  <Typography variant='h6'>Optimized SEO using google search console.</Typography>
                 </ListItem>
               </List>
               <Box style={{ position: 'fixed', left: '2%', top: '50%', transform: 'translateY(-50%)' }}>

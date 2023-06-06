@@ -27,17 +27,17 @@ function SideBar() {
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><LinkedInIcon sx={styles.icon} /></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/johnnam93/"><LinkedInIcon sx={styles.icon} /></a>
           </ListItemIcon>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><FacebookIcon sx={styles.icon} /></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/john.nam.98/"><FacebookIcon sx={styles.icon} /></a>
           </ListItemIcon>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/johnnam1121"><InstagramIcon sx={styles.icon} /></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/johnnam93/"><InstagramIcon sx={styles.icon} /></a>
           </ListItemIcon>
         </ListItem>
       </List>
