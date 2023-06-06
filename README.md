@@ -8,4 +8,5 @@ Feel free to clone. Run npm i to download dependencies
 Website was created using React and Material UI. Upgraded from the previous website and used a lighter color palette.
 
 -added multiple pages
+
 -added a seperate projects section with a dedicated page for each project with quick descriptions and links to the project.
