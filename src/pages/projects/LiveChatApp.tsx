@@ -50,7 +50,6 @@ const LiveChatApp = () => {
             <Grid item xs={10} md={10} sx={{ mt: '4vh' }}>
               <Typography variant='h1' sx={{ textAlign: 'center' }}>Live Chat App </Typography>
               <hr className='full-width-hr' />
-              <Typography variant='h5'>Live Chat App</Typography>
               <Typography variant='h6'>View github repo <Link to='https://github.com/johnnam1121/chat-app' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#9090dd', fontWeight: 'bold' }}>here</Link></Typography>
               <Typography variant='h6'>View live app <Link to='https://johnnam1121.github.io/chat-app' target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#9090dd', fontWeight: 'bold' }}>here</Link></Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: '2vh' }}>

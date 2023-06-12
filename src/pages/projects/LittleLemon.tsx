@@ -72,7 +72,7 @@ const LittleLemon = () => {
                 </Link>
               </Box>
               <Box style={{ position: 'fixed', right: '2%', top: '50%', transform: 'translateY(-50%)' }}>
-                <Link to='/TherapyAlliance' style={{ textDecoration: 'none', color: '#4D5C55' }}>
+                <Link to='/NetflixClone' style={{ textDecoration: 'none', color: '#4D5C55' }}>
                   <ArrowForwardIosIcon style={{ fontSize: '7vh' }} />
                 </Link>
               </Box>

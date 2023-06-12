@@ -1,6 +1,11 @@
 const projects = [
 
   {
+    project: 'Netflix Clone',
+    link: '/NetflixClone',
+    tooltip: 'Netflix like clone made using Next.js, Tailwind CSS, and Prisma'
+  },
+  {
     project: 'Therapy Alliance',
     link: '/TherapyAlliance',
     tooltip: 'Website created for local Therapy Recruiting Company'

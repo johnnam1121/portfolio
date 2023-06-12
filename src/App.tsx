@@ -11,6 +11,7 @@ import SCUnitCounter from './pages/projects/SCUnitCounter';
 import JobScraper from './pages/projects/JobScraper';
 import LittleLemon from './pages/projects/LittleLemon';
 import TherapyAlliance from './pages/projects/TherapyAlliance';
+import NetflixClone from './pages/projects/NetflixClone';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Projects" element={<ProjectsPage />} />
         <Route path="/Experience" element={<ExperiencePage />} />
 
+        <Route path="/NetflixClone" element={<NetflixClone />} />
         <Route path="/TherapyAlliance" element={<TherapyAlliance />} />
         <Route path="/OneShotPocha" element={<OneShotPocha />} />
         <Route path="/LiveChatApp" element={<LiveChatApp />} />
