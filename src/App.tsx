@@ -30,7 +30,7 @@ function App() {
         <Route path="/JobScraper" element={<JobScraper />} />
         <Route path="/SCUnitCounter" element={<SCUnitCounter />} />
         <Route path="/LittleLemon" element={<LittleLemon />} />
-        
+
       </Routes>
     </HashRouter>
   );

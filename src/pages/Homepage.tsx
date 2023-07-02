@@ -6,6 +6,7 @@ import Landing from '../components/Landing'
 import SideBar from '../components/Sidebar'
 import Topbar from '../components/Topbar'
 import '../pages/Homepage.css'
+import LoadingScreen from '../components/LoadingScreen'
 
 function Circle() {
   const [animation, setAnimation] = useState('animate 10s linear infinite');
@@ -82,26 +83,60 @@ const theme = createTheme({
 //#536878 medium slate blue color
 
 function Homepage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1300);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <FadeTransition>
-      <ThemeProvider theme={theme}>
-        <Container maxWidth={false} sx={{ minHeight: '100vh' }} className='area'>
-          <Topbar />
-          <Landing />
-          <Box className='remove'>
-            <SideBar />
-          </Box>
-          <div>
-            <ul className="circles">
-              {Array.from({ length: repeat }, (_, index) => (
-                <Circle key={index} />
-              ))}
-            </ul>
-          </div>
-        </Container>
-      </ThemeProvider>
-    </FadeTransition>
+    <div>
+      {isLoading ? <LoadingScreen /> : <FadeTransition>
+        <ThemeProvider theme={theme}>
+          <Container maxWidth={false} sx={{ minHeight: '100vh' }} className='area'>
+            <Topbar />
+            <Landing />
+            <Box className='remove'>
+              <SideBar />
+            </Box>
+            <div>
+              <ul className="circles">
+                {Array.from({ length: repeat }, (_, index) => (
+                  <Circle key={index} />
+                ))}
+              </ul>
+            </div>
+          </Container>
+        </ThemeProvider>
+      </FadeTransition>
+      }
+    </div>
   );
-}
+};
+
+// return (
+//   <FadeTransition>
+//     <ThemeProvider theme={theme}>
+//       <Container maxWidth={false} sx={{ minHeight: '100vh' }} className='area'>
+//         <Topbar />
+//         <Landing />
+//         <Box className='remove'>
+//           <SideBar />
+//         </Box>
+//         <div>
+//           <ul className="circles">
+//             {Array.from({ length: repeat }, (_, index) => (
+//               <Circle key={index} />
+//             ))}
+//           </ul>
+//         </div>
+//       </Container>
+//     </ThemeProvider>
+//   </FadeTransition>
+// );
 
 export default Homepage
