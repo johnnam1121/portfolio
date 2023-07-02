@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.b00e793c.css",
-    "main.js": "/portfolio/static/js/main.375263b8.js",
+    "main.js": "/portfolio/static/js/main.90d4916f.js",
     "static/js/787.8d4efb73.chunk.js": "/portfolio/static/js/787.8d4efb73.chunk.js",
     "static/media/starcraft.png": "/portfolio/static/media/starcraft.df2858ae9dbf3408ff46.png",
     "static/media/Opening.jpg": "/portfolio/static/media/Opening.51bfd14057f9aead39fd.jpg",
@@ -13,16 +13,17 @@
     "static/media/Youtube.png": "/portfolio/static/media/Youtube.8109f0b9dbc1c28ac1a4.png",
     "static/media/ProfilePic.jpg": "/portfolio/static/media/ProfilePic.7165724f459de7026c31.jpg",
     "static/media/job scraper.png": "/portfolio/static/media/job scraper.949e047fec2b51aebd72.png",
+    "static/media/JN.gif": "/portfolio/static/media/JN.b5a0b3ff9a02f186e24b.gif",
     "static/media/GradPhoto.jpg": "/portfolio/static/media/GradPhoto.4c76a76986ca5769548a.jpg",
     "static/media/GWCBTOY.jpg": "/portfolio/static/media/GWCBTOY.6ec6fdbfa4153dac19c5.jpg",
     "static/media/LoginPage.png": "/portfolio/static/media/LoginPage.3c8da1c29cc7b4588ae8.png",
     "index.html": "/portfolio/index.html",
     "main.b00e793c.css.map": "/portfolio/static/css/main.b00e793c.css.map",
-    "main.375263b8.js.map": "/portfolio/static/js/main.375263b8.js.map",
+    "main.90d4916f.js.map": "/portfolio/static/js/main.90d4916f.js.map",
     "787.8d4efb73.chunk.js.map": "/portfolio/static/js/787.8d4efb73.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b00e793c.css",
-    "static/js/main.375263b8.js"
+    "static/js/main.90d4916f.js"
   ]
 }
