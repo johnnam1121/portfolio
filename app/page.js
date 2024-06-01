@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const gifDuration = 1000;
+    const gifDuration = 1400;
 
     const timer = setTimeout(() => {
       setIsGifPlaying(false);
