@@ -1,5 +1,7 @@
 const nextConfig = {
-  basePath: '/portfolio',
+  basePath: "/portfolio",
+  output: "export",
+  reactStrictMode: true,
   webpack: (config, { isServer }) => {
     config.cache = false; // Disable cache
 
