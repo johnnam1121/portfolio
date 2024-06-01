@@ -1,4 +1,3 @@
-// next.config.js
 const nextConfig = {
   basePath: '/portfolio',
   webpack: (config, { isServer }) => {
@@ -12,7 +11,7 @@ const nextConfig = {
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
-            publicPath: `/_next/static/audio/`,
+            publicPath: `/portfolio/_next/static/audio/`,
             outputPath: `${isServer ? "../" : ""}static/audio/`,
           },
         },
