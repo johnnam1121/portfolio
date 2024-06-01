@@ -78,7 +78,7 @@ export default function Home() {
   } else if (score >= 300 && score < 400) {
     displayScore = (
       <div>
-        <p className='text-sm text-center mt-4 fixed left-1/2 bottom-5 transform -translate-x-1/2'>Stop playing! It's over!</p>
+        <p className='text-sm text-center mt-4 fixed left-1/2 bottom-5 transform -translate-x-1/2'>Stop playing! It&apos;s over!</p>
       </div>
     );
   } else if (score >= 400 && score < 500) {
@@ -90,7 +90,7 @@ export default function Home() {
   } else if (score >= 500) {
     displayScore = (
       <div>
-        <p className='flex items-center text-sm text-center mt-4 fixed left-1/2 bottom-5 transform -translate-x-1/2'>OK YOU WIN! HERE IS A COOKIE &nbsp;<FaCookie /> &nbsp; Goodbye~ </p>
+        <p className="flex items-center text-sm text-center mt-4 fixed left-1/2 bottom-5 transform -translate-x-1/2">OK YOU WIN! HERE IS A COOKIE &nbsp;<FaCookie /> &nbsp; Goodbye~ </p>
       </div>
     );
   } else {
@@ -111,7 +111,7 @@ export default function Home() {
             <CircleAnimation repeat={repeat} updateScore={updateScore} />
             <div className='flex flex-col'>
               <div class="text-left">
-                <h1 class="ml-6 text-3xl sm:text-6xl mb-4 text-mainText">Hi, I'm John!</h1>
+                <h1 class="ml-6 text-3xl sm:text-6xl mb-4 text-mainText">Hi, I&apos;m John!</h1>
                 <h1 class="ml-6 text-3xl sm:text-6xl mb-4 text-mainText">Welcome to my portfolio website</h1>
                 <h2 class="ml-6 text-xl sm:text-2xl my-4 text-secondary">This website was made using Next.js and Tailwind CSS</h2>
               </div>

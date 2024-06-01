@@ -10,7 +10,7 @@ export default function About() {
         <div className='w-1/4'>
           <h1 className="text-4xl inline-block sm:text-4xl mb-4 text-mainText border-b-2 border-secondary">About Me</h1>
           <h2 className="text-2xl sm:text-xl mb-4 text-secondary">
-            Hi, I'm John Nam, and I love building things! I remember building my first PC from free/scrap
+            Hi, I&apos;m John Nam, and I love building things! I remember building my first PC from free/scrap
             parts from friends and family and when it finally booted up, it was one of the most satisfying
             feelings in the world!
           </h2>
@@ -21,7 +21,7 @@ export default function About() {
           </h2>
         </div>
         <div className='pl-10 w-1/6'>
-          <Image src={profilePic} className="shadow-lg rounded-md" />
+          <Image src={profilePic} alt='My profile picture' className="shadow-lg rounded-md" />
         </div>
       </div>
 
