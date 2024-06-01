@@ -5,7 +5,7 @@
   "homepage": "https://johnnam1121.github.io/portfolio",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d .next",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

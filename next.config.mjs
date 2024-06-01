@@ -1,5 +1,6 @@
 // next.config.js
 const nextConfig = {
+  basePath: '/portfolio',
   webpack: (config, { isServer }) => {
     config.cache = false; // Disable cache
 
