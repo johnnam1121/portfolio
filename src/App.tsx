@@ -15,24 +15,38 @@ import NetflixClone from './pages/projects/NetflixClone';
 
 function App() {
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/About" element={<AboutPage />} />
-        <Route path="/Projects" element={<ProjectsPage />} />
-        <Route path="/Experience" element={<ExperiencePage />} />
+    // <HashRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Homepage />} />
+    //     <Route path="/About" element={<AboutPage />} />
+    //     <Route path="/Projects" element={<ProjectsPage />} />
+    //     <Route path="/Experience" element={<ExperiencePage />} />
 
-        <Route path="/NetflixClone" element={<NetflixClone />} />
-        <Route path="/TherapyAlliance" element={<TherapyAlliance />} />
-        <Route path="/OneShotPocha" element={<OneShotPocha />} />
-        <Route path="/LiveChatApp" element={<LiveChatApp />} />
-        <Route path="/YoutubeClone" element={<YoutubeClone />} />
-        <Route path="/JobScraper" element={<JobScraper />} />
-        <Route path="/SCUnitCounter" element={<SCUnitCounter />} />
-        <Route path="/LittleLemon" element={<LittleLemon />} />
+    //     <Route path="/NetflixClone" element={<NetflixClone />} />
+    //     <Route path="/TherapyAlliance" element={<TherapyAlliance />} />
+    //     <Route path="/OneShotPocha" element={<OneShotPocha />} />
+    //     <Route path="/LiveChatApp" element={<LiveChatApp />} />
+    //     <Route path="/YoutubeClone" element={<YoutubeClone />} />
+    //     <Route path="/JobScraper" element={<JobScraper />} />
+    //     <Route path="/SCUnitCounter" element={<SCUnitCounter />} />
+    //     <Route path="/LittleLemon" element={<LittleLemon />} />
 
-      </Routes>
-    </HashRouter>
+    //   </Routes>
+    // </HashRouter>
+    <div style={{ backgroundColor: '#f7f7f7', height: '100vh', width: '100vw', position: 'absolute' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <p style={{ color: '#000000' }}>If you are not redirected automatically,&nbsp;
+          <a href="https://github.com/johnnam1121"
+            style={{
+              color: '#807E79',
+              textDecoration: 'none',
+              transition: 'color 0.5s',
+            }}>
+            click here
+          </a>.
+        </p>
+      </div>
+    </div>
   );
 }
 
