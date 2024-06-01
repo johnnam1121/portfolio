@@ -2,10 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://johnnam1121.github.io/portfolio",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d .next",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
