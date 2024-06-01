@@ -29,7 +29,7 @@ const Circle = ({ updateScore }) => {
 
     const randomDelay = `${Math.floor(Math.random() * 10)}s`;
     setDelay(randomDelay);
-  }, [audio]);
+  }, []);
 
   return (
     <div>

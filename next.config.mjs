@@ -1,3 +1,4 @@
+// next.config.js
 const nextConfig = {
   webpack: (config, { isServer }) => {
     config.cache = false; // Disable cache
@@ -10,7 +11,7 @@ const nextConfig = {
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
-            publicPath: `/portfolio/_next/static/audio/`,
+            publicPath: `/_next/static/audio/`,
             outputPath: `${isServer ? "../" : ""}static/audio/`,
           },
         },
