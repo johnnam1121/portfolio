@@ -43,7 +43,7 @@ export default function About() {
         </a>
       </div>
 
-      <div className='w-2/3 mx-auto flex justify-center items-center mt-20 md:mt-40'>
+      <div className='w-2/3 mx-auto flex justify-center items-center mt-20 md:mt-40 pb-4'>
         <p className='bottom-0'>&copy; 2024 John Nam. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
       </div>
     </main>

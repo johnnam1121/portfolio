@@ -1,10 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/pages/games/meaningoflife/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/chunks/app/pages/games/meaningoflife/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -17,15 +16,21 @@
       "static/chunks/main-app.js",
       "static/chunks/app/pages/About/page.js"
     ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
     "/pages/Projects/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/Projects/page.js"
     ],
-    "/pages/Contact/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/pages/Contact/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
