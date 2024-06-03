@@ -15,6 +15,7 @@ export async function POST(request) {
       const body = await request.json();
       const { answer } = body;
       console.log('received answer', answer);
+      console.log('env variable check:', process.env.NEXT_PUBLIC_THE_THINKER_ANSWER)
 
       if (answer === process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
         thinkerAnswer = answer;
