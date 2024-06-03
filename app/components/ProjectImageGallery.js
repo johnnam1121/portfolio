@@ -7,8 +7,8 @@ export default function ProjectImageGallery() {
         <div className="relative hover:-translate-y-3 hover:translate-x-1 duration-200 my-2 sm:px-1 lg:p-2 lg:my-4 group" key={index}>
           <a href={image.link} target='_blank' rel="noopener noreferrer">
             <img className="h-full w-full object-cover border-2 border-secondary shadow-lg rounded-lg transition-opacity duration-200 group-hover:opacity-50" src={image.src.src} alt={image.alt} />
-            <div className='w-1/2 h-1/2 rounded-lg border-1 border-secondary shadow-lg translate-y-1/2 absolute inset-0 opacity-0 group-hover:opacity-100 duration-200 bg-primary mx-auto flex flex-col items-center justify-center'>
-              <p className="text-sm md:text-md text-center text-mainText">
+            <div className='w-1/2 h-1/2 rounded-lg border-1 border-secondary shadow-lg translate-y-1/2 absolute inset-0 opacity-0 group-hover:opacity-70 duration-200 bg-primary mx-auto flex flex-col items-center justify-center'>
+              <p className="text-sm text-center text-mainText">
                 {image.heading}
               </p>
             </div>
