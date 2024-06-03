@@ -27,7 +27,7 @@ export default function MeaningOfLife() {
       console.log('the data was retrieved properly', data);
       if (data.success) {
         window.alert('Answer is correct!!');
-        window.location.href = '/pages/games/HarryPotter'
+        window.location.href = '/pages/games/erised'
       } else {
         window.alert('Incorrect answer!');
       }

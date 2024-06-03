@@ -43,7 +43,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="py-3 text-xl text-secondary px-6 text-center  border-b-2 md:border-b-0  hover:bg-mainText  border-secondary  md:hover:text-mainText md:hover:bg-transparent">
-                  <Link href="/pages/games/MeaningOfLife" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/pages/games/thethinker" onClick={() => setNavbar(!navbar)}>
                     Play a game?
                   </Link>
                 </li>
