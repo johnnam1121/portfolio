@@ -1,5 +1,10 @@
 {
   "pages": {
+    "/pages/games/harryPotter/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/games/harryPotter/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -11,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/pages/games/meaningoflife/page.js"
     ],
-    "/_not-found/page": [
+    "/pages/About/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/pages/About/page.js"
     ]
   }
 }

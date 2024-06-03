@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
 
+let thinkerAnswer = '';
+
+export async function GET(request){
+  return new Response(JSON.stringify({ answer: thinkerAnswer }), { status: 200 })
+}
+
 // To handle a POST request to /api
 export async function POST(request) {
   console.log('post success');
@@ -11,6 +17,7 @@ export async function POST(request) {
       console.log('received answer', answer);
 
       if (answer === process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
+        thinkerAnswer = answer;
         return new Response(JSON.stringify({ success: true }), { status: 200 })
       } else {
         return new Response(JSON.stringify({ success: false }), { status: 400 });

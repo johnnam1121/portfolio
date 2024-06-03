@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image';
 import thinker from '../../../assets/game/thinker.jpg'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Game() {
+export default function meaningofLife() {
   const [answer, setAnswer] = useState('');
 
   const handleChange = (e) => {
@@ -27,6 +27,7 @@ export default function Game() {
       console.log('the data was retrieved properly', data);
       if (data.success) {
         window.alert('Answer is correct!!');
+        window.location.href = '/pages/games/harryPotter'
       } else {
         window.alert('Incorrect answer!');
       }
