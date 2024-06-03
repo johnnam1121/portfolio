@@ -1,6 +1,10 @@
 {
-  "/pages/games/harryPotter/page": "app/pages/games/harryPotter/page.js",
-  "/pages/About/page": "app/pages/About/page.js",
-  "/pages/games/meaningoflife/page": "app/pages/games/meaningoflife/page.js",
-  "/api/thinkerCheck/route": "app/api/thinkerCheck/route.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/pages/games/MeaningOfLife/page": "app/pages/games/MeaningOfLife/page.js",
+  "/pages/games/HarryPotter/page": "app/pages/games/HarryPotter/page.js",
+  "/api/hpCheck/route": "app/api/hpCheck/route.js",
+  "/pages/games/WIP/page": "app/pages/games/WIP/page.js",
+  "/api/thinkerCheck/route": "app/api/thinkerCheck/route.js",
+  "/pages/About/page": "app/pages/About/page.js"
 }

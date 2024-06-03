@@ -3,7 +3,7 @@ import Image from 'next/image';
 import thinker from '../../../assets/game/thinker.jpg'
 import { useEffect, useState } from 'react';
 
-export default function meaningofLife() {
+export default function MeaningOfLife() {
   const [answer, setAnswer] = useState('');
 
   const handleChange = (e) => {
@@ -15,7 +15,7 @@ export default function meaningofLife() {
 
     // No looking for the answer in the source code, cheater!
     try {
-      console.log('the answer is', { answer })
+      // console.log('the answer is', { answer })
       const response = await fetch('/api/thinkerCheck', {
         method: 'POST',
         body: JSON.stringify({ answer }),
@@ -27,7 +27,7 @@ export default function meaningofLife() {
       console.log('the data was retrieved properly', data);
       if (data.success) {
         window.alert('Answer is correct!!');
-        window.location.href = '/pages/games/harryPotter'
+        window.location.href = '/pages/games/HarryPotter'
       } else {
         window.alert('Incorrect answer!');
       }
