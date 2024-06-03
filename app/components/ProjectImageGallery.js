@@ -2,18 +2,19 @@ import { ProjectImages } from './ProjectImages';
 
 export default function ProjectImageGallery() {
   return (
-    <div className='pt-28 sm:pt-40 lg:pt-72'>
-      <div className='flex mx-auto items-center justify-center'>
-        <h1>some text here</h1>
-      </div>
-
-      <div className='pt-10 w-2/3 sm:w-3/4 sm:pt-20 grid sm:grid-cols-2 md:grid-cols-3 lg:w-2/3 lg:pt-40 lg:grid-cols-4 mx-auto justify-center'>
-        {ProjectImages.map((image, index) => (
-          <div className="my-2 sm:px-1 lg:p-2 lg:my-4" key={index}>
-            <a href={image.link}><img className="h-full w-full object-cover border-2 border-secondary shadow-lg rounded-lg hover:-translate-y-3 duration-200" src={image.src.src} alt={image.alt} /></a>
-          </div>
-        ))}
-      </div>
+    <div className='pt-10 w-2/3 sm:w-3/4 sm:pt-20 grid sm:grid-cols-2 md:grid-cols-3 lg:w-2/3 lg:pt-20 lg:grid-cols-4 mx-auto justify-center align-top'>
+      {ProjectImages.map((image, index) => (
+        <div className="relative hover:-translate-y-3 hover:translate-x-1 duration-200 my-2 sm:px-1 lg:p-2 lg:my-4 group" key={index}>
+          <a href={image.link} target='_blank' rel="noopener noreferrer">
+            <img className="h-full w-full object-cover border-2 border-secondary shadow-lg rounded-lg transition-opacity duration-200 group-hover:opacity-50" src={image.src.src} alt={image.alt} />
+            <div className='w-1/2 h-1/2 rounded-lg border-1 border-secondary shadow-lg translate-y-1/2 absolute inset-0 opacity-0 group-hover:opacity-100 duration-200 bg-primary mx-auto flex flex-col items-center justify-center'>
+              <p className="text-sm md:text-md text-center text-mainText">
+                {image.heading}
+              </p>
+            </div>
+          </a>
+        </div>
+      ))}
     </div>
   );
 }

@@ -1,61 +1,60 @@
-import jobScraper from '../assets/ProjectImages/jobScraper.png';
-import littleLemon from '../assets/ProjectImages/littleLemon.png';
-import chatRoom from '../assets/ProjectImages/chatRoom.png';
-import NetflixClone from '../assets/ProjectImages/NetflixClone.png';
-import Oneshot from '../assets/ProjectImages/Oneshot.png';
-import starcraft from '../assets/ProjectImages/starcraft.png';
-import TherapyAlliance from '../assets/ProjectImages/TherapyAlliance.png';
-import Youtube from '../assets/ProjectImages/Youtube.png';
+import jobScraper from '../assets/projectImages/jobScraper.png';
+import littleLemon from '../assets/projectImages/littleLemon.png';
+import chatRoom from '../assets/projectImages/chatRoom.png';
+import NetflixClone from '../assets/projectImages/NetflixClone.png';
+import Oneshot from '../assets/projectImages/Oneshot.png';
+import starcraft from '../assets/projectImages/starcraft.png';
+import TherapyAlliance from '../assets/projectImages/TherapyAlliance.png';
+import Youtube from '../assets/projectImages/Youtube.png';
 
 export const ProjectImages = [
   {
     src: TherapyAlliance,
-    alt: "test",
-    heading: "Image 1",
-    description: "Description of Image 1.",
-    link: "https://www.google.com",
+    alt: "Theapy Alliance Website",
+    heading: "Theapy Alliance Website",
+    link: "https://tdtherapyalliance.com",
   },
   {
     src: Oneshot,
-    alt: "Image 2",
-    heading: "Image 2",
-    description: "Description of Image 2."
+    alt: "One Shot Pocha",
+    heading: "One Shot Pocha",
+    link: "https://johnnam1121.github.io/one-shot-pocha",
   },
   {
     src: NetflixClone,
-    alt: "Image 3",
-    heading: "Image 3",
-    description: "Description of Image 3."
+    alt: "Netflix Clone",
+    heading: "Netflix Clone",
+    link: "https://github.com/johnnam1121/netflix-clone",
   },
   {
     src: jobScraper,
-    alt: "Image 4",
-    heading: "Image 4",
-    description: "Description of Image 4."
+    alt: "Job Scraper",
+    heading: "Job Scraper",
+    link: 'https://github.com/johnnam1121/job-post-scraper'
   },
   {
     src: chatRoom,
-    alt: "Image 5",
-    heading: "Image 5",
-    description: "Description of Image 5."
+    alt: "Chat App",
+    heading: "Chat App",
+    link: "https://github.com/johnnam1121/chat-app",
   },
   {
     src: starcraft,
-    alt: "Image 3",
-    heading: "Image 3",
-    description: "Description of Image 3."
+    alt: "SC2 Unit Counter",
+    heading: "SC2 Unit Counter",
+    link: "https://johntrieseverything.github.io/starcraft2-unit-counter",
   },
   {
     src: littleLemon,
-    alt: "Image 4",
-    heading: "Image 4",
-    description: "Description of Image 4."
+    alt: "Little Lemon",
+    heading: "Little Lemon",
+    link: "https://johnnam1121.github.io/littleLemon",
   },
   {
     src: Youtube,
-    alt: "Image 4",
-    heading: "Image 4",
-    description: "Description of Image 4."
+    alt: "Youtube Clone",
+    heading: "Youtube Clone",
+    link: "https://github.com/johnnam1121/ignwebapp",
   },
 
 ];

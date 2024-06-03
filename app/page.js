@@ -116,9 +116,11 @@ export default function Home() {
                 <h2 class="ml-6 text-xl sm:text-2xl my-4 text-secondary">This website was made using Next.js and Tailwind CSS</h2>
               </div>
               <div className='z-10'>
-                <button className="ml-6 bg-secondary text-primary hover:bg-mainText duration-300 py-2 px-4 rounded">
-                  Check out my stuff
-                </button>
+                <a href="https://github.com/johnnam1121">
+                  <button className="ml-6 bg-secondary text-primary hover:bg-mainText duration-300 py-2 px-4 rounded">
+                    Check out my stuff
+                  </button>
+                </a>
               </div>
             </div>
 

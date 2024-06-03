@@ -10,14 +10,28 @@ export default function Game() {
     setAnswer(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // No looking for the answer in the source code, cheater!
-    if (answer === process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
-      window.alert('You got it right!')
-    } else {
-      window.alert('Sorry, try again!')
+    try {
+      console.log('the answer is', { answer })
+      const response = await fetch('/api/thinkerCheck', {
+        method: 'POST',
+        body: JSON.stringify({ answer }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const data = await response.json();
+      console.log('the data was retrieved properly', data);
+      if (data.success) {
+        window.alert('Answer is correct!!');
+      } else {
+        window.alert('Incorrect answer!');
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
   }
 

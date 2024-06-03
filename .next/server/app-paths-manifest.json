@@ -1,6 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/pages/games/meaningoflife/page": "app/pages/games/meaningoflife/page.js",
-  "/page": "app/page.js",
-  "/pages/Projects/page": "app/pages/Projects/page.js"
+  "/api/thinkerCheck/route": "app/api/thinkerCheck/route.js"
 }
