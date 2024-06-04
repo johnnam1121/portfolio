@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ProjectImages } from './ProjectImages';
 
 export default function ProjectImageGallery() {

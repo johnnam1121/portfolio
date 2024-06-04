@@ -40,7 +40,7 @@ export default function HarryPotter() {
       correctAudio.play();
       setTimeout(() => {
         window.alert('A fellow Harry Potter fan I see? Fun fact: did you know the Mirror of Erised spelt backwards says Desire?');
-        window.location.href = '/pages/games/WIP'
+        window.location.href = '/pages/games/atla'
       }, 2000); // Adjust the delay time (in milliseconds) as needed
     } else {
       const wrongAudio = new Audio(wrong);
@@ -90,7 +90,7 @@ export default function HarryPotter() {
           </div>
 
           <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
-            <Image className='shadow-lg' src={Erised} alt='The thinker photo' />
+            <Image className='shadow-lg' src={Erised} alt='Mirror of Erised' />
           </div>
           <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>
             <p>Answer here:&nbsp;</p>
