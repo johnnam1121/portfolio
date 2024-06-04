@@ -83,7 +83,7 @@ export default function ATLA() {
           <div className='w-2/3'>
             {counter > 9 ? (
               <h1 className="overflow-wrap break-word pt-10 text-center text-xl sm:text-3xl text-mainText mb-3">
-                &quot;It's time for you to look inward, and start asking yourself the big questions. Who are you? And what do you want?&quot;
+                &quot;It&apos;s time for you to look inward, and start asking yourself the big questions. Who are you? And what do you want?&quot;
               </h1>
             ) : (
               <h1 className="overflow-wrap break-word pt-10 text-center text-xl sm:text-3xl text-mainText mb-3">
