@@ -14,15 +14,11 @@ export default function ATLA() {
   useEffect(() => {
     const checkAnswer = async () => {
       const answer = localStorage.getItem('hpAnswer');
-      if (answer != process.env.NEXT_PUBLIC_HP_ANSWER1) {
-        // console.log('not first answer')
-        if (answer != process.env.NEXT_PUBLIC_HP_ANSWER2) {
-          // console.log('not second answer')
-          window.alert('No cheating! Go answer the previous questions');
-          window.location.href = '/pages/games/erised';
-        } else {
-          setAllow(true);
-        }
+      if (answer != process.env.NEXT_PUBLIC_HP_ANSWER1 && answer != process.env.NEXT_PUBLIC_HP_ANSWER2) {
+        window.alert('No cheating! Go answer the previous questions');
+        window.location.href = '/pages/games/erised';
+      } else {
+        setAllow(true);
       }
     };
     const storedCounter = localStorage.getItem('atlaCounter');
@@ -43,9 +39,8 @@ export default function ATLA() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    setCounter(counter + 1);
-    if (counter >= 0 && counter < 9) {
+    if (counter >= 0 && counter < 10) {
+      setCounter(counter + 1);
       const wrongAudio = new Audio(wrong);
       wrongAudio.volume = 0.5;
       wrongAudio.currentTime = 0;
