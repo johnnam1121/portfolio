@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 let thinkerAnswer = '';
 
-export async function GET(request){
+export async function GET(request) {
   return new Response(JSON.stringify({ answer: thinkerAnswer }), { status: 200 })
 }
 
@@ -15,7 +15,7 @@ export async function POST(request) {
       const body = await request.json();
       const { answer } = body;
       console.log('received answer', answer);
-      console.log('env variable check:', process.env.NEXT_PUBLIC_THE_THINKER_ANSWER)
+      // console.log('env variable check:', process.env.NEXT_PUBLIC_THE_THINKER_ANSWER)
 
       if (answer === process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
         thinkerAnswer = answer;

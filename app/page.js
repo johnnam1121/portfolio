@@ -6,14 +6,18 @@ import JN from './assets/JN.gif'
 import { FaCookie } from "react-icons/fa6";
 
 export default function Home() {
-  const [isGifPlaying, setIsGifPlaying] = useState(true);
-
-  const [score, setScore] = useState(-1);
   const repeat = 20;
+  const [isGifPlaying, setIsGifPlaying] = useState(true);
+  const [score, setScore] = useState(() => {
+    const storedScore = localStorage.getItem('bubblesPopped');
+    return storedScore ? parseInt(storedScore) : -1;
+  });
 
   const updateScore = () => {
-    setScore(score + 1);
+    setScore(prevScore => prevScore + 1);
+    localStorage.setItem('bubblesPopped', score + 1);
   };
+
 
   useEffect(() => {
     const gifDuration = 1400;
@@ -103,17 +107,17 @@ export default function Home() {
     <main className="bg-primary h-screen">
       {isGifPlaying ? (
         <div className="flex items-center justify-center h-full">
-          <Image src={JN} alt="Loading GIF" className="w-48 h-48" />
+          <Image src={JN} alt="Loading GIF" className="w-48 h-48" priority  />
         </div>
       ) : (
         <>
-          <div class="h-screen flex justify-center items-center">
+          <div className="h-screen flex justify-center items-center">
             <CircleAnimation repeat={repeat} updateScore={updateScore} />
             <div className='flex flex-col'>
-              <div class="text-left">
-                <h1 class="ml-6 text-3xl sm:text-6xl mb-4 text-mainText">Hi, I&apos;m John!</h1>
-                <h1 class="ml-6 text-3xl sm:text-6xl mb-4 text-mainText">Welcome to my portfolio website</h1>
-                <h2 class="ml-6 text-xl sm:text-2xl my-4 text-secondary">This website was made using Next.js and Tailwind CSS</h2>
+              <div className="text-left">
+                <h1 className="ml-6 text-3xl sm:text-6xl mb-4 text-mainText">Hi, I&apos;m John!</h1>
+                <h1 className="ml-6 text-3xl sm:text-6xl mb-4 text-mainText">Welcome to my portfolio website</h1>
+                <h2 className="ml-6 text-xl sm:text-2xl my-4 text-secondary">This website was made using Next.js and Tailwind CSS</h2>
               </div>
               <div className='z-10'>
                 <a href="https://github.com/johnnam1121">

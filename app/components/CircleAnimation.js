@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../components/Circles.css';
-import popSound from '../assets/popSound.wav';
+import popSound from '../assets/game/sounds/popSound.wav';
 
 const Circle = ({ updateScore }) => {
   const [animation, setAnimation] = useState('animate 8s linear infinite');

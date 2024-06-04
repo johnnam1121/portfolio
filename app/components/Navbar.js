@@ -1,10 +1,29 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from "next/link";
 import { FaHouseChimney, FaBars, FaSquareXmark } from "react-icons/fa6";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
+  const [bubblesPopped, setBubblesPopped] = useState(0);
+
+  useEffect(() => {
+    // Check if localStorage is available and get the value of bubblesPopped
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const bubbles = localStorage.getItem('bubblesPopped');
+      if (bubbles) {
+        setBubblesPopped(parseInt(bubbles, 10));
+      }
+    }
+  }, []);
+
+  const moreBubbles = () => {
+    console.log("Bubbles popped:", bubblesPopped);
+    if (bubblesPopped < 50) {
+      window.alert('Start by popping some bubbles first! Try popping 50!')
+    }
+  }
+
   return (
     <div>
       <nav className={`w-full fixed top-0 left-0 right-0 z-10 ${navbar ? 'bg-primary z-30 duration-300' : 'bg-primary'}`}>
@@ -43,7 +62,8 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="py-3 text-xl text-secondary px-6 text-center  border-b-2 md:border-b-0  hover:bg-mainText  border-secondary  md:hover:text-mainText md:hover:bg-transparent">
-                  <Link href="/pages/games/thethinker" onClick={() => setNavbar(!navbar)}>
+                  <Link
+                    href={bubblesPopped >= 50 ? ("/pages/games/thethinker") : ('')} onMouseDown={() => { moreBubbles() }} onClick={() => setNavbar(!navbar)}>
                     Play a game?
                   </Link>
                 </li>
