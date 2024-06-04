@@ -9,15 +9,23 @@ export default function Home() {
   const repeat = 20;
   const [isGifPlaying, setIsGifPlaying] = useState(true);
   const [score, setScore] = useState(() => {
-    const storedScore = localStorage.getItem('bubblesPopped');
-    return storedScore ? parseInt(storedScore) : -1;
+    if (typeof window !== 'undefined') {
+      const storedScore = localStorage.getItem('bubblesPopped');
+      return storedScore ? parseInt(storedScore) : -1;
+    } else {
+      return -1;
+    }
   });
 
   const updateScore = () => {
-    setScore(prevScore => prevScore + 1);
-    localStorage.setItem('bubblesPopped', score + 1);
+    setScore(prevScore => {
+      const newScore = prevScore + 1;
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('bubblesPopped', newScore);
+      }
+      return newScore;
+    });
   };
-
 
   useEffect(() => {
     const gifDuration = 1400;
@@ -107,7 +115,7 @@ export default function Home() {
     <main className="bg-primary h-screen">
       {isGifPlaying ? (
         <div className="flex items-center justify-center h-full">
-          <Image src={JN} alt="Loading GIF" className="w-48 h-48" priority  />
+          <Image src={JN} alt="Loading GIF" className="w-48 h-48" priority />
         </div>
       ) : (
         <>
