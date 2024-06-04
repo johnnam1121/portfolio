@@ -7,6 +7,7 @@ import wrong from '../../../assets/game/sounds/wrong.wav';
 
 export default function MeaningOfLife() {
   const [answer, setAnswer] = useState('');
+  const [hint, setHint] = useState(false);
 
   const handleChange = (e) => {
     setAnswer(e.target.value);
@@ -21,11 +22,11 @@ export default function MeaningOfLife() {
 
     if (localStorage.getItem('thinkerAnswer') === process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
       const correctAudio = new Audio(correct);
-      correctAudio.volume = 1;
+      correctAudio.volume = 0.5;
       correctAudio.currentTime = 0;
       correctAudio.play();
       setTimeout(() => {
-        window.alert('Well done! Did you know that the universes expansion rate is abour 42 miles per second? Maybe Douglas Adams was not that far off! Now get ready. It only gets harder from here!')
+        window.alert('Well done!\nDid you know that the universes expansion rate is abour 42 miles per second? Maybe Douglas Adams was not that far off!\nNow get ready. It only gets harder from here!')
         window.location.href = '/pages/games/erised';
       }, 2000); // Adjust the delay time (in milliseconds) as needed
     } else {
@@ -52,6 +53,20 @@ export default function MeaningOfLife() {
           <input onChange={handleChange} className='bg-secondaryText w-1/2 md:w-1/12 text-center' placeholder='Answer' />
           <button className='bg-mainText text-primary rounded-lg ml-2 px-2'>Submit</button>
         </form>
+        <div className='mt-4'>
+          <p>Need a hint?&nbsp;
+            <button className='px-2 hover:bg-secondaryText duration-150'
+              onClick={() => (setHint(!hint))}>Click me!
+            </button>
+          </p>
+        </div>
+        <div className='mt-4 w-2/3'>
+          {hint ? (
+            <p className='bg-secondaryText text-center'>&quot;The answer to the ultimate question is simpler than you think.&quot;</p>
+          ) : (
+            <p></p>
+          )}
+        </div>
       </div>
     </main>
   );

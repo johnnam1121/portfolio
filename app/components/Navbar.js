@@ -5,29 +5,6 @@ import { FaHouseChimney, FaBars, FaSquareXmark } from "react-icons/fa6";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
-  const [bubblesScore, setBubblesScore] = useState(0);
-
-  const moreBubbles = () => {
-    // console.log("Bubbles popped:", bubblesPopped);
-    if (bubblesScore < 20) {
-      window.alert('Start by popping some bubbles first! Try popping 20!')
-    }
-  }
-
-  useEffect(() => {
-
-    setBubblesScore(localStorage.getItem('bubblesPopped'));
-    console.log('bubblesPopped', bubblesScore);
-
-  }, [])
-
-  // useEffect(() => {
-  //   const popped = parseInt(localStorage.getItem('bubblesPopped'));
-  //   console.log("Popped:", popped);
-  //   if (popped === 20) {
-  //     window.location.reload();
-  //   }
-  // }, []);
 
   return (
     <div>
@@ -67,17 +44,10 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="py-3 text-xl text-secondary px-6 text-center  border-b-2 md:border-b-0  hover:bg-mainText  border-secondary  md:hover:text-mainText md:hover:bg-transparent">
-                  {bubblesScore > 19 ? (
-                    <Link
-                      href="/pages/games/thethinker" onClick={() => setNavbar(!navbar)}>
-                      Play a game?
-                    </Link>
-                  ) : (
-                    <Link
-                      href='' onMouseDown={() => { moreBubbles() }} onClick={() => setNavbar(!navbar)}>
-                      test?
-                    </Link>
-                  )}
+                  <Link
+                    href="/pages/games/thethinker" onClick={() => setNavbar(!navbar)}>
+                    Play a game?
+                  </Link>
                 </li>
               </ul>
             </div>

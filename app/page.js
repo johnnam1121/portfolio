@@ -24,13 +24,6 @@ export default function Home() {
       const newScore = prevScore + 1;
       if (typeof window !== 'undefined') {
         localStorage.setItem('bubblesPopped', newScore);
-        if (newScore === 20) {
-          console.log('reloading navbar')
-          setReloadNavbar(true);
-          {
-            reloadNavbar && <Navbar />
-          }
-        }
       }
       return newScore;
     });

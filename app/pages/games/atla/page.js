@@ -6,7 +6,7 @@ import atla from '../../../assets/game/atla.png';
 import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
-export default function HarryPotter() {
+export default function ATLA() {
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
   const [counter, setCounter] = useState(0);
@@ -14,19 +14,28 @@ export default function HarryPotter() {
   useEffect(() => {
     const checkAnswer = async () => {
       const answer = localStorage.getItem('hpAnswer');
-
       if (answer != process.env.NEXT_PUBLIC_HP_ANSWER1) {
+        // console.log('not first answer')
         if (answer != process.env.NEXT_PUBLIC_HP_ANSWER2) {
+          // console.log('not second answer')
           window.alert('No cheating! Go answer the previous questions');
           window.location.href = '/pages/games/erised';
-
+        } else {
+          setAllow(true);
         }
-      } else {
-        setAllow(true);
       }
     };
+    const storedCounter = localStorage.getItem('atlaCounter');
+    if (storedCounter !== null) {
+      setCounter(parseInt(storedCounter, 10));
+    }
+
     checkAnswer();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('atlaCounter', counter);
+  }, [counter]);
 
   const handleChange = (e) => {
     setAnswer(e.target.value);
@@ -36,24 +45,31 @@ export default function HarryPotter() {
     e.preventDefault();
 
     setCounter(counter + 1);
-
-    // localStorage.setItem('hpAnswer', answer);
-    // // No looking for the answer in the source code, cheater!
-    // if (answer === process.env.NEXT_PUBLIC_HP_ANSWER1 || answer === process.env.NEXT_PUBLIC_HP_ANSWER2) {
-    //   const correctAudio = new Audio(correct);
-    //   correctAudio.volume = 1;
-    //   correctAudio.currentTime = 0;
-    //   correctAudio.play();
-    //   setTimeout(() => {
-    //     window.alert('A fellow Harry Potter fan I see? Fun fact: did you know the Mirror of Erised spelt backwards says Desire?');
-    //     window.location.href = '/pages/games/WIP'
-    //   }, 2000); // Adjust the delay time (in milliseconds) as needed
-    // } else {
-    //   const wrongAudio = new Audio(wrong);
-    //   wrongAudio.volume = 0.5;
-    //   wrongAudio.currentTime = 0;
-    //   wrongAudio.play();
-    // }
+    if (counter >= 0 && counter < 9) {
+      const wrongAudio = new Audio(wrong);
+      wrongAudio.volume = 0.5;
+      wrongAudio.currentTime = 0;
+      wrongAudio.play();
+    }
+    if (counter > 9) {
+      localStorage.setItem('atlaAnswer', answer);
+      // No looking for the answer in the source code, cheater!
+      if (answer === process.env.NEXT_PUBLIC_ATLA_ANSWER) {
+        const correctAudio = new Audio(correct);
+        correctAudio.volume = 0.5;
+        correctAudio.currentTime = 0;
+        correctAudio.play();
+        setTimeout(() => {
+          window.alert(`Nice! This one was more tricky huh? It only gets harder!\nDid you know the episode 'The Tales of Ba Sing Se' was dedicated to Mako Iwamatsu, the original voice actor of Uncle Iroh?\nHe tragically passed away during the second season of ATLA and his last bit of work before his cancer forced him to retire was the song 'leaves from the vine' featured in this episode.`);
+          window.location.href = '/pages/games/WIP'
+        }, 2000); // Adjust the delay time (in milliseconds)
+      } else {
+        const wrongAudio = new Audio(wrong);
+        wrongAudio.volume = 0.5;
+        wrongAudio.currentTime = 0;
+        wrongAudio.play();
+      }
+    }
   }
 
   return (
@@ -93,7 +109,19 @@ export default function HarryPotter() {
               </h2>
             ) : (<></>)}
           </form>
-          {/* <div className='mt-4'>
+          <div>
+            <h2 className='mt-1'>No more hints from now on!</h2>
+          </div>
+        </div>
+      ) : (
+        <div className='h-screen bg-primary'></div>
+      )}
+    </main>
+  );
+}
+
+
+{/* <div className='mt-4'>
             <p>Need a hint?&nbsp;
               <button className='px-2 hover:bg-secondaryText duration-150'
                 onClick={() => (setHint(!hint))}>Click me!
@@ -107,10 +135,3 @@ export default function HarryPotter() {
               <p></p>
             )}
           </div> */}
-        </div>
-      ) : (
-        <div className='h-screen bg-primary'></div>
-      )}
-    </main>
-  );
-}

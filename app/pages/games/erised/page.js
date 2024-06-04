@@ -35,11 +35,11 @@ export default function HarryPotter() {
     // No looking for the answer in the source code, cheater!
     if (answer === process.env.NEXT_PUBLIC_HP_ANSWER1 || answer === process.env.NEXT_PUBLIC_HP_ANSWER2) {
       const correctAudio = new Audio(correct);
-      correctAudio.volume = 1;
+      correctAudio.volume = 0.5;
       correctAudio.currentTime = 0;
       correctAudio.play();
       setTimeout(() => {
-        window.alert('A fellow Harry Potter fan I see? Fun fact: did you know the Mirror of Erised spelt backwards says Desire?');
+        window.alert('A fellow Harry Potter fan I see?\nFun fact: did you know the Mirror of Erised spelt backwards spells Desire? Because it shows the views most desired wishes. Get it?');
         window.location.href = '/pages/games/atla'
       }, 2000); // Adjust the delay time (in milliseconds) as needed
     } else {
@@ -60,30 +60,29 @@ export default function HarryPotter() {
 
           <div className='w-2/3'>
             <h1 className="overflow-wrap break-word pt-10 text-center text-xl sm:text-3xl text-mainText">
-              Happiness<span className='text-primary text-xs hover:text-amber-400'>H</span>
-              can<span className='text-primary text-xs hover:text-amber-400'>a</span>
+              Happiness<span className='text-primary text-xs hover:text-amber-400'>e</span>
+              can<span className='text-primary text-xs hover:text-amber-400'>y</span>
               be<span className='text-primary text-xs hover:text-amber-400'>r</span>
               found,
             </h1>
             <h1 className="overflow-wrap break-word text-center text-xl sm:text-3xl text-mainText">
-
               even<span className='text-primary text-xs hover:text-amber-400'>r</span>
-              in<span className='text-primary text-xs hover:text-amber-400'>y</span>
-              the<span className='text-primary text-xs hover:text-amber-400'>-</span>
+              in<span className='text-primary text-xs hover:text-amber-400'>a</span>
+              the<span className='text-primary text-xs hover:text-amber-400'>H</span>
               darkest<span className='text-primary text-xs hover:text-amber-400'>y</span>
-              of<span className='text-primary text-xs hover:text-amber-400'>e</span>
+              of<span className='text-primary text-xs hover:text-amber-400'>r</span>
               times,
             </h1>
             <h1 className="overflow-wrap break-word text-center text-xl sm:text-3xl text-mainText">
-              if<span className='text-primary text-xs hover:text-amber-400'>r</span>
-              one<span className='text-primary text-xs hover:text-amber-400'>a</span>
+              if<span className='text-primary text-xs hover:text-amber-400'>a</span>
+              one<span className='text-primary text-xs hover:text-amber-400'>z</span>
               only<span className='text-primary text-xs hover:text-amber-400'>w</span>
               remembers<span className='text-primary text-xs hover:text-amber-400'>i</span>
             </h1>
             <h1 className="overflow-wrap break-word text-center text-xl sm:text-3xl mb-4 text-mainText">
-              to<span className='text-primary text-xs hover:text-amber-400'>z</span>
-              turn<span className='text-primary text-xs hover:text-amber-400'>a</span>
-              on<span className='text-primary text-xs hover:text-amber-400'>r</span>
+              to<span className='text-primary text-xs hover:text-amber-400'>a</span>
+              turn<span className='text-primary text-xs hover:text-amber-400'>r</span>
+              on<span className='text-primary text-xs hover:text-amber-400'>-</span>
               the<span className='text-primary text-xs hover:text-amber-400'>d</span>
               light. 💡
             </h1>

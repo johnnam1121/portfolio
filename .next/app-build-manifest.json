@@ -1,9 +1,10 @@
 {
   "pages": {
-    "/pages/Projects/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/pages/Projects/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,26 +17,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/pages/games/thethinker/page.js"
     ],
-    "/pages/games/atla/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/games/atla/page.js"
-    ],
     "/pages/games/erised/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/games/erised/page.js"
     ],
+    "/pages/games/atla/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/games/atla/page.js"
+    ],
     "/pages/games/WIP/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/games/WIP/page.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
     ]
   }
 }
