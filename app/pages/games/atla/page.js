@@ -2,11 +2,11 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import atlaOne from '../../../assets/game/atlaOne.jpg';
-import atla from '../../../assets/game/atla.png';
+import atlaTwo from '../../../assets/game/atlaTwo.jpg';
 import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
-export default function ATLA() {
+export default function atla() {
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
   const [counter, setCounter] = useState(0);
@@ -48,7 +48,7 @@ export default function ATLA() {
     }
     if (counter > 9) {
       localStorage.setItem('atlaAnswer', answer);
-      // No looking for the answer in the source code, cheater!
+      // Nice try! The answer is hidden from the public :) Maybe you're abilty to look in the source code might be helpful later..
       if (answer === process.env.NEXT_PUBLIC_ATLA_ANSWER) {
         const correctAudio = new Audio(correct);
         correctAudio.volume = 0.5;
@@ -56,7 +56,7 @@ export default function ATLA() {
         correctAudio.play();
         setTimeout(() => {
           window.alert(`Nice! This one was more tricky huh? It only gets harder!\nDid you know the episode 'The Tales of Ba Sing Se' was dedicated to Mako Iwamatsu, the original voice actor of Uncle Iroh?\nHe tragically passed away during the second season of ATLA and his last bit of work before his cancer forced him to retire was the song 'leaves from the vine' featured in this episode.`);
-          window.location.href = '/pages/games/WIP'
+          window.location.href = '/pages/games/goblin'
         }, 2000); // Adjust the delay time (in milliseconds)
       } else {
         const wrongAudio = new Audio(wrong);
@@ -89,7 +89,7 @@ export default function ATLA() {
 
           <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
             {counter > 9 ? (
-              <Image className='shadow-lg' src={atla} alt='Avatar the last airbender photo' />
+              <Image className='shadow-lg' src={atlaTwo} alt='Avatar the last airbender photo' />
             ) : (
               <Image className='shadow-lg' src={atlaOne} alt='Avatar the last airbender photo' />
             )}

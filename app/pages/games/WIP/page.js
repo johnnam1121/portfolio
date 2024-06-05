@@ -4,7 +4,7 @@ import Erised from '../../../assets/game/Erised.jpg'
 import { useEffect, useState } from 'react';
 import { FaLightbulb } from "react-icons/fa6";
 
-export default function HarryPotter() {
+export default function WIP() {
   const [hint, setHint] = useState(false);
   const [answer, setAnswer] = useState('');
 

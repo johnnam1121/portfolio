@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
-export default function MeaningOfLife() {
+export default function thethinker() {
   const [answer, setAnswer] = useState('');
   const [hint, setHint] = useState(false);
 
@@ -13,7 +13,7 @@ export default function MeaningOfLife() {
     setAnswer(e.target.value);
   };
 
-  // No looking for the answer in the source code, cheater!
+  // Nice try! The answer is hidden from the public :) Maybe you're abilty to look in the source code might be helpful later..
   const handleSubmit = async (e) => {
     e.preventDefault();
 

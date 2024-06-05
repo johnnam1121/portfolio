@@ -5,7 +5,7 @@ import Erised from '../../../assets/game/Erised.jpg';
 import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
-export default function HarryPotter() {
+export default function erised() {
   const [hint, setHint] = useState(false);
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
@@ -32,7 +32,7 @@ export default function HarryPotter() {
     e.preventDefault();
 
     localStorage.setItem('hpAnswer', answer);
-    // No looking for the answer in the source code, cheater!
+    // Nice try! The answer is hidden from the public :) Maybe you're abilty to look in the source code might be helpful later..
     if (answer === process.env.NEXT_PUBLIC_HP_ANSWER1 || answer === process.env.NEXT_PUBLIC_HP_ANSWER2) {
       const correctAudio = new Audio(correct);
       correctAudio.volume = 0.5;
