@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Erised from '../../../assets/game/Erised.jpg';
+import erisedPicture from '../../../assets/game/Erised.jpg';
 import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
-export default function erised() {
+export default function Erised() {
   const [hint, setHint] = useState(false);
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
@@ -89,7 +89,7 @@ export default function erised() {
           </div>
 
           <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
-            <Image className='shadow-lg' src={Erised} alt='Mirror of Erised' />
+            <Image className='shadow-lg' src={erisedPicture} alt='Mirror of Erised' priority/>
           </div>
           <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>
             <p>Answer here:&nbsp;</p>

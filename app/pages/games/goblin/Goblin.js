@@ -18,6 +18,10 @@ export default function Goblin() {
         window.location.href = '/pages/games/atla';
       } else {
         setAllow(true);
+        localStorage.setItem('1', process.env.NEXT_PUBLIC_GOBLIN_HINT1);
+        localStorage.setItem('2', process.env.NEXT_PUBLIC_GOBLIN_HINT2);
+        localStorage.setItem('3', process.env.NEXT_PUBLIC_GOBLIN_HINT3);
+        localStorage.setItem('4', process.env.NEXT_PUBLIC_GOBLIN_HINT4);
       }
     };
     checkAnswer();
@@ -30,22 +34,22 @@ export default function Goblin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // localStorage.setItem('hpAnswer', answer);
-    // if (answer === process.env.NEXT_PUBLIC_HP_ANSWER1 || answer === process.env.NEXT_PUBLIC_HP_ANSWER2) {
-    //   const correctAudio = new Audio(correct);
-    //   correctAudio.volume = 0.5;
-    //   correctAudio.currentTime = 0;
-    //   correctAudio.play();
-    //   setTimeout(() => {
-    //     window.alert('A fellow Harry Potter fan I see?\nFun fact: did you know the Mirror of Erised spelt backwards spells Desire? Because it shows the views most desired wishes. Get it?');
-    //     window.location.href = '/pages/games/atla'
-    //   }, 2000); // Adjust the delay time (in milliseconds) as needed
-    // } else {
-    //   const wrongAudio = new Audio(wrong);
-    //   wrongAudio.volume = 0.5;
-    //   wrongAudio.currentTime = 0;
-    //   wrongAudio.play();
-    // }
+    localStorage.setItem('goblinAnswer', answer);
+    if (answer === process.env.NEXT_PUBLIC_GOBLIN_ANSWER1 || answer.includes(process.env.NEXT_PUBLIC_GOBLIN_ANSWER2)) {
+      const correctAudio = new Audio(correct);
+      correctAudio.volume = 0.5;
+      correctAudio.currentTime = 0;
+      correctAudio.play();
+      setTimeout(() => {
+        window.alert('Ok I am seriously impressed and I am running out of ideas.. The next one is going to be the last and most difficult one. Be prepared!\nFun fact: Kim Eun Sook, the screenwriter of the show, also wrote several other top charting dramas?\nMost notably: Descendants of the Sun, Mr. Sunshine, The Glory, Lovers in Paris. \nIf you have not seen these, go watch them! They are all amazing.');
+        window.location.href = '/pages/games/WIP'
+      }, 2000); // Adjust the delay time (in milliseconds) as needed
+    } else {
+      const wrongAudio = new Audio(wrong);
+      wrongAudio.volume = 0.5;
+      wrongAudio.currentTime = 0;
+      wrongAudio.play();
+    }
   }
 
   return (
@@ -64,7 +68,7 @@ export default function Goblin() {
             </div>
 
             <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
-              <Image className='shadow-lg' src={goblin} alt='Mirror of Erised' />
+              <Image className='shadow-lg' src={goblin} alt='Korean Poetry' priority />
             </div>
             <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>
               <p>Answer here:&nbsp;</p>
@@ -79,43 +83,3 @@ export default function Goblin() {
     </>
   );
 }
-
-
-// decided to use local storage instead.
-// try {
-//   const response = await fetch('/api/thinkerCheck');
-//   if (!response.ok) {
-//     throw new Error('Failed to fetch data');
-//   }
-//   const data = await response.json();
-//   console.log(data);
-
-//   if (data.answer != process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
-//     window.alert('No cheating! Go answer the previous questions');
-//     window.location.href = '/pages/games/thethinker'
-//   } else {
-//     setAllow(true)
-//   }
-// } catch (error) {
-//   console.error('Error:', error);
-// }
-
-// try {
-//   const response = await fetch('/api/hpCheck', {
-//     method: 'POST',
-//     body: JSON.stringify({ answer }),
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   });
-//   const data = await response.json();
-//   console.log('the data was retrieved properly', data);
-//   if (data.success) {
-//     window.alert('Answer is correct!!');
-//     window.location.href = '/pages/games/WIP'
-//   } else {
-//     window.alert('Incorrect answer!');
-//   }
-// } catch (error) {
-//   console.error('Error:', error);
-// }

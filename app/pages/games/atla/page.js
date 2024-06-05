@@ -6,7 +6,7 @@ import atlaTwo from '../../../assets/game/atlaTwo.jpg';
 import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
-export default function atla() {
+export default function ATLA() {
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
   const [counter, setCounter] = useState(0);
@@ -89,9 +89,9 @@ export default function atla() {
 
           <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
             {counter > 9 ? (
-              <Image className='shadow-lg' src={atlaTwo} alt='Avatar the last airbender photo' />
+              <Image className='shadow-lg' src={atlaTwo} alt='Avatar the last airbender photo' priority />
             ) : (
-              <Image className='shadow-lg' src={atlaOne} alt='Avatar the last airbender photo' />
+              <Image className='shadow-lg' src={atlaOne} alt='Avatar the last airbender photo' priority />
             )}
           </div>
           <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>

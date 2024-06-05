@@ -4,11 +4,9 @@ import CircleAnimation from './components/CircleAnimation'
 import { useEffect, useState } from 'react';
 import JN from './assets/JN.gif'
 import { FaCookie } from "react-icons/fa6";
-import Navbar from './components/Navbar';
 
 export default function Home() {
   const repeat = 20;
-  const [reloadNavbar, setReloadNavbar] = useState(false);
   const [isGifPlaying, setIsGifPlaying] = useState(true);
   const [score, setScore] = useState(() => {
     if (typeof window !== 'undefined') {

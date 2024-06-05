@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
-export default function thethinker() {
+export default function TheThinker() {
   const [answer, setAnswer] = useState('');
   const [hint, setHint] = useState(false);
 
@@ -41,8 +41,7 @@ export default function thethinker() {
     <main className="bg-primary">
       <div className='mx-auto h-screen flex flex-col justify-center items-center'>
         <div className='w-3/4 mx-auto flex flex-col justify-center items-center'>
-          <h1 className="text-center text-4xl inline-block sm:text-4xl text-mainText">Good job popping the bubbles!</h1>
-          <h1 className="text-center text-4xl inline-block sm:text-4xl text-mainText border-b-2 border-secondary">New try your hand at a couple of riddles!</h1>
+          <h1 className="text-center text-4xl inline-block sm:text-4xl text-mainText border-b-2 border-secondary">Try your hand at a couple of riddles?</h1>
           <h1 className="pt-10 md:pt-28 text-center text-2xl sm:text-3xl mb-4 text-mainText">What is the meaning of life, the universe and everything else?</h1>
         </div>
         <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
