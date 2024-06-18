@@ -1,4 +1,7 @@
 {
   "/page": "app/page.js",
+  "/pages/games/thethinker/page": "app/pages/games/thethinker/page.js",
+  "/api/thinkerCheck/route": "app/api/thinkerCheck/route.js",
+  "/pages/games/erised/page": "app/pages/games/erised/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }

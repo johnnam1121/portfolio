@@ -7,7 +7,25 @@ import wrong from '../../../assets/game/sounds/wrong.wav';
 
 export default function TheThinker() {
   const [answer, setAnswer] = useState('');
+  const [numberCorrect, setNumberCorrect] = useState(0);
   const [hint, setHint] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/thinkerCheck');
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        // console.log(data);
+        setNumberCorrect(data.numberCorrect)
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const handleChange = (e) => {
     setAnswer(e.target.value);
@@ -29,6 +47,20 @@ export default function TheThinker() {
         window.alert('Well done!\nDid you know that the universes expansion rate is abour 42 miles per second? Maybe Douglas Adams was not that far off!\nNow get ready. It only gets harder from here!')
         window.location.href = '/pages/games/erised';
       }, 2000); // Adjust the delay time (in milliseconds) as needed
+
+      try {
+        // send correct answer to api
+        const response = await fetch('/api/thinkerCheck', {
+          method: 'POST',
+          body: JSON.stringify({ answer }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+      } catch (error) {
+        console.error('Error:', error);
+      }
+
     } else {
       const wrongAudio = new Audio(wrong);
       wrongAudio.volume = 0.5;
@@ -42,11 +74,12 @@ export default function TheThinker() {
       <div className='mx-auto h-screen flex flex-col justify-center items-center'>
         <div className='w-3/4 mx-auto flex flex-col justify-center items-center'>
           <h1 className="text-center text-4xl inline-block sm:text-4xl text-mainText border-b-2 border-secondary">Try your hand at a couple of riddles?</h1>
-          <h1 className="pt-10 md:pt-28 text-center text-2xl sm:text-3xl mb-4 text-mainText">What is the meaning of life, the universe and everything else?</h1>
+          <h1 className="pt-10 md:pt-28 text-center text-2xl sm:text-3xl text-mainText mb-4">What is the meaning of life, the universe and everything else?</h1>
         </div>
         <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
           <Image className='shadow-lg' src={thinker} alt='The thinker photo' priority />
         </div>
+        <h1 className="text-center text-sm inline-block sm:text-sm text-mainText my-2">Number of people who got this correct: {numberCorrect}</h1>
         <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>
           <p>Answer here:&nbsp;</p>
           <input onChange={handleChange} className='bg-secondaryText w-1/2 md:w-1/12 text-center' placeholder='Answer' />
@@ -70,25 +103,3 @@ export default function TheThinker() {
     </main>
   );
 }
-
-// using local storage instead
-// try {
-//   // console.log('the answer is', { answer })
-//   const response = await fetch('/api/thinkerCheck', {
-//     method: 'POST',
-//     body: JSON.stringify({ answer }),
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   });
-//   const data = await response.json();
-//   console.log('the data was retrieved properly', data);
-//   if (data.success) {
-//     window.alert('Answer is correct!!');
-//     window.location.href = '/pages/games/erised'
-//   } else {
-//     window.alert('Incorrect answer!');
-//   }
-// } catch (error) {
-//   console.error('Error:', error);
-// }

@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
-let thinkerAnswer = '';
+let numberCorrect = 0;
 
 export async function GET(request) {
-  return new Response(JSON.stringify({ answer: thinkerAnswer }), { status: 200 })
+  return new Response(JSON.stringify({ numberCorrect: numberCorrect }), { status: 200 })
 }
 
 // To handle a POST request to /api
@@ -18,7 +18,7 @@ export async function POST(request) {
       // console.log('env variable check:', process.env.NEXT_PUBLIC_THE_THINKER_ANSWER)
 
       if (answer === process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
-        thinkerAnswer = answer;
+        numberCorrect = numberCorrect + 1;
         return new Response(JSON.stringify({ success: true }), { status: 200 })
       } else {
         return new Response(JSON.stringify({ success: false }), { status: 400 });

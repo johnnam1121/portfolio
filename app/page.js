@@ -103,6 +103,7 @@ export default function Home() {
     displayScore = (
       <div>
         <p className='flex items-center text-sm text-center mt-4 fixed left-1/2 bottom-5 transform -translate-x-1/2'>OK YOU WIN! HERE IS A COOKIE &nbsp;<FaCookie /> &nbsp; Goodbye~ </p>
+        <button className='bg-secondary text-primary hover:bg-mainText duration-300 py-2 px-4 rounded'>Start over?</button>
       </div>
     );
   } else {
