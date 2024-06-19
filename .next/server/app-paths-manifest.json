@@ -1,11 +1,3 @@
 {
-  "/pages/games/thethinker/page": "app/pages/games/thethinker/page.js",
-  "/pages/games/erised/page": "app/pages/games/erised/page.js",
-  "/pages/games/goblin/page": "app/pages/games/goblin/page.js",
-  "/pages/games/atla/page": "app/pages/games/atla/page.js",
-  "/api/goblinCheck/route": "app/api/goblinCheck/route.js",
-  "/pages/games/WIP/page": "app/pages/games/WIP/page.js",
-  "/api/atlaCheck/route": "app/api/atlaCheck/route.js",
-  "/api/thinkerCheck/route": "app/api/thinkerCheck/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/page": "app/page.js"
 }
