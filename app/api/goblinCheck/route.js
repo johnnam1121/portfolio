@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const filePath = path.join(process.cwd(), 'hpNumberCorrect.json');
+const filePath = path.join(process.cwd(), 'goblinNumberCorrect.json');
 
 // Ensure the file exists before attempting to read or write to it
 async function ensureFileExists() {
@@ -23,10 +23,10 @@ export async function GET(request) {
     await ensureFileExists();
     const data = await fs.readFile(filePath, 'utf8');
     const { count } = JSON.parse(data);
-    return new Response(JSON.stringify({ hpNumberCorrect: count }), { status: 200 });
+    return new Response(JSON.stringify({ goblinNumberCorrect: count }), { status: 200 });
   } catch (error) {
     console.error('Error reading file:', error);
-    return new Response(JSON.stringify({ hpNumberCorrect: 0 }), { status: 500 });
+    return new Response(JSON.stringify({ goblinNumberCorrect: 0 }), { status: 500 });
   }
 }
 
@@ -40,7 +40,7 @@ export async function POST(request) {
       const { answer } = body;
       console.log('received answer', answer);
 
-      if (answer === process.env.NEXT_PUBLIC_HP_ANSWER1 || answer === process.env.NEXT_PUBLIC_HP_ANSWER2) {
+      if (answer === process.env.NEXT_PUBLIC_GOBLIN_ANSWER1 || answer === process.env.NEXT_PUBLIC_GOBLIN_ANSWER2) {
         const data = await fs.readFile(filePath, 'utf8');
         const json = JSON.parse(data);
         json.count += 1;

@@ -1,25 +1,51 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import { promises as fs } from 'fs';
+import path from 'path';
 
-let numberCorrect = 0;
+const filePath = path.join(process.cwd(), 'thinkerNumberCorrect.json');
 
-export async function GET(request) {
-  return new Response(JSON.stringify({ numberCorrect: numberCorrect }), { status: 200 })
+// Ensure the file exists before attempting to read or write to it
+async function ensureFileExists() {
+  try {
+    await fs.access(filePath);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      // If the file does not exist, create it with an initial count of 0
+      await fs.writeFile(filePath, JSON.stringify({ count: 0 }), 'utf8');
+    } else {
+      throw error;
+    }
+  }
 }
 
-// To handle a POST request to /api
+export async function GET(request) {
+  try {
+    await ensureFileExists();
+    const data = await fs.readFile(filePath, 'utf8');
+    const { count } = JSON.parse(data);
+    return new Response(JSON.stringify({ thinkerNumberCorrect: count }), { status: 200 });
+  } catch (error) {
+    console.error('Error reading file:', error);
+    return new Response(JSON.stringify({ thinkerNumberCorrect: 0 }), { status: 500 });
+  }
+}
+
 export async function POST(request) {
   console.log('post success');
   try {
+    await ensureFileExists();
     const contentType = request.headers.get('content-type');
     if (contentType && contentType.includes('application/json')) {
       const body = await request.json();
       const { answer } = body;
       console.log('received answer', answer);
-      // console.log('env variable check:', process.env.NEXT_PUBLIC_THE_THINKER_ANSWER)
 
       if (answer === process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
-        numberCorrect = numberCorrect + 1;
-        return new Response(JSON.stringify({ success: true }), { status: 200 })
+        const data = await fs.readFile(filePath, 'utf8');
+        const json = JSON.parse(data);
+        json.count += 1;
+        await fs.writeFile(filePath, JSON.stringify(json), 'utf8');
+        return new Response(JSON.stringify({ success: true }), { status: 200 });
       } else {
         return new Response(JSON.stringify({ success: false }), { status: 400 });
       }

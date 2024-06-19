@@ -7,6 +7,7 @@ import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
 export default function ATLA() {
+  const [numberCorrect, setNumberCorrect] = useState(0);
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
   const [counter, setCounter] = useState(0);
@@ -19,6 +20,17 @@ export default function ATLA() {
         window.location.href = '/pages/games/erised';
       } else {
         setAllow(true);
+        try {
+          const response = await fetch('/api/atlaCheck');
+          if (!response.ok) {
+            throw new Error('Failed to fetch data');
+          }
+          const data = await response.json();
+          // console.log(data);
+          setNumberCorrect(data.atlaNumberCorrect)
+        } catch (error) {
+          console.error('Error:', error);
+        }
       }
     };
     const storedCounter = localStorage.getItem('atlaCounter');
@@ -57,7 +69,21 @@ export default function ATLA() {
         setTimeout(() => {
           window.alert(`Nice! This one was more tricky huh? It only gets harder!\nDid you know the episode 'The Tales of Ba Sing Se' was dedicated to Mako Iwamatsu, the original voice actor of Uncle Iroh?\nHe tragically passed away during the second season of ATLA and his last bit of work before his cancer forced him to retire was the song 'leaves from the vine' featured in this episode.`);
           window.location.href = '/pages/games/goblin'
-        }, 2000); // Adjust the delay time (in milliseconds)
+        }, 2000);
+
+        try {
+          // send correct answer to api
+          await fetch('/api/atlaCheck', {
+            method: 'POST',
+            body: JSON.stringify({ answer }),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+        } catch (error) {
+          console.error('Error:', error);
+        }
+
       } else {
         const wrongAudio = new Audio(wrong);
         wrongAudio.volume = 0.5;
@@ -94,6 +120,7 @@ export default function ATLA() {
               <Image className='shadow-lg' src={atlaOne} alt='Avatar the last airbender photo' priority />
             )}
           </div>
+          <h1 className="text-center text-sm inline-block sm:text-sm text-mainText my-2">Number of people who got this correct: {numberCorrect}</h1>
           <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>
             <p>Answer here:&nbsp;</p>
             <input onChange={handleChange} className='bg-secondaryText w-1/2 md:w-1/12 text-center' placeholder='Answer' />

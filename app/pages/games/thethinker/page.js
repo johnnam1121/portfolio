@@ -19,7 +19,7 @@ export default function TheThinker() {
         }
         const data = await response.json();
         // console.log(data);
-        setNumberCorrect(data.numberCorrect)
+        setNumberCorrect(data.thinkerNumberCorrect)
       } catch (error) {
         console.error('Error:', error);
       }

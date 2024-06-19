@@ -6,6 +6,7 @@ import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
 export default function Goblin() {
+  const [numberCorrect, setNumberCorrect] = useState(0);
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
 
@@ -22,6 +23,17 @@ export default function Goblin() {
         localStorage.setItem('2', process.env.NEXT_PUBLIC_GOBLIN_HINT2);
         localStorage.setItem('3', process.env.NEXT_PUBLIC_GOBLIN_HINT3);
         localStorage.setItem('4', process.env.NEXT_PUBLIC_GOBLIN_HINT4);
+        try {
+          const response = await fetch('/api/goblinCheck');
+          if (!response.ok) {
+            throw new Error('Failed to fetch data');
+          }
+          const data = await response.json();
+          // console.log(data);
+          setNumberCorrect(data.goblinNumberCorrect)
+        } catch (error) {
+          console.error('Error:', error);
+        }
       }
     };
     checkAnswer();
@@ -43,7 +55,21 @@ export default function Goblin() {
       setTimeout(() => {
         window.alert('Ok I am seriously impressed and I am running out of ideas.. The next one is going to be the last and most difficult one. Be prepared!\nFun fact: Kim Eun Sook, the screenwriter of the show, also wrote several other top charting dramas?\nMost notably: Descendants of the Sun, Mr. Sunshine, The Glory, Lovers in Paris. \nIf you have not seen these, go watch them! They are all amazing.');
         window.location.href = '/pages/games/WIP'
-      }, 2000); // Adjust the delay time (in milliseconds) as needed
+      }, 2000);
+
+      try {
+        // send correct answer to api
+        const response = await fetch('/api/goblinCheck', {
+          method: 'POST',
+          body: JSON.stringify({ answer }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+      } catch (error) {
+        console.error('Error:', error);
+      }
+
     } else {
       const wrongAudio = new Audio(wrong);
       wrongAudio.volume = 0.5;
@@ -70,6 +96,7 @@ export default function Goblin() {
             <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
               <Image className='shadow-lg' src={goblin} alt='Korean Poetry' priority />
             </div>
+            <h1 className="text-center text-sm inline-block sm:text-sm text-mainText my-2">Number of people who got this correct: {numberCorrect}</h1>
             <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>
               <p>Answer here:&nbsp;</p>
               <input onChange={handleChange} className='bg-secondaryText w-1/2 md:w-1/12 text-center' placeholder='Answer' />

@@ -6,6 +6,7 @@ import correct from '../../../assets/game/sounds/correct.wav';
 import wrong from '../../../assets/game/sounds/wrong.wav';
 
 export default function Erised() {
+  const [numberCorrect, setNumberCorrect] = useState(0);
   const [hint, setHint] = useState(false);
   const [answer, setAnswer] = useState('');
   const [allow, setAllow] = useState(false);
@@ -13,16 +14,26 @@ export default function Erised() {
   useEffect(() => {
     const checkAnswer = async () => {
       const answer = localStorage.getItem('thinkerAnswer');
-
       if (answer != process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
         window.alert('No cheating! Go answer the previous questions');
         window.location.href = '/pages/games/thethinker';
       } else {
         setAllow(true);
+        try {
+          const response = await fetch('/api/hpCheck');
+          if (!response.ok) {
+            throw new Error('Failed to fetch data');
+          }
+          const data = await response.json();
+          //console.log(data);
+          setNumberCorrect(data.hpNumberCorrect)
+        } catch (error) {
+          console.error('Error:', error);
+        }
       }
     };
     checkAnswer();
-  }, []);
+  }, [allow]);
 
   const handleChange = (e) => {
     setAnswer(e.target.value);
@@ -41,7 +52,21 @@ export default function Erised() {
       setTimeout(() => {
         window.alert('A fellow Harry Potter fan I see?\nFun fact: did you know the Mirror of Erised spelt backwards spells Desire? Because it shows the views most desired wishes. Get it?');
         window.location.href = '/pages/games/atla'
-      }, 2000); // Adjust the delay time (in milliseconds) as needed
+      }, 2000);
+
+      try {
+        // send correct answer to api
+        await fetch('/api/hpCheck', {
+          method: 'POST',
+          body: JSON.stringify({ answer }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+      } catch (error) {
+        console.error('Error:', error);
+      }
+
     } else {
       const wrongAudio = new Audio(wrong);
       wrongAudio.volume = 0.5;
@@ -89,8 +114,9 @@ export default function Erised() {
           </div>
 
           <div className='w-2/3 mx-auto flex flex-col justify-center items-center'>
-            <Image className='shadow-lg' src={erisedPicture} alt='Mirror of Erised' priority/>
+            <Image className='shadow-lg' src={erisedPicture} alt='Mirror of Erised' priority />
           </div>
+          <h1 className="text-center text-sm inline-block sm:text-sm text-mainText my-2">Number of people who got this correct: {numberCorrect}</h1>
           <form onSubmit={handleSubmit} className='mt-4 w-2/3 mx-auto flex flex-row justify-center items-center'>
             <p>Answer here:&nbsp;</p>
             <input onChange={handleChange} className='bg-secondaryText w-1/2 md:w-1/12 text-center' placeholder='Answer' />
@@ -118,43 +144,3 @@ export default function Erised() {
     </main>
   );
 }
-
-
-// decided to use local storage instead.
-// try {
-//   const response = await fetch('/api/thinkerCheck');
-//   if (!response.ok) {
-//     throw new Error('Failed to fetch data');
-//   }
-//   const data = await response.json();
-//   console.log(data);
-
-//   if (data.answer != process.env.NEXT_PUBLIC_THE_THINKER_ANSWER) {
-//     window.alert('No cheating! Go answer the previous questions');
-//     window.location.href = '/pages/games/thethinker'
-//   } else {
-//     setAllow(true)
-//   }
-// } catch (error) {
-//   console.error('Error:', error);
-// }
-
-// try {
-//   const response = await fetch('/api/hpCheck', {
-//     method: 'POST',
-//     body: JSON.stringify({ answer }),
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   });
-//   const data = await response.json();
-//   console.log('the data was retrieved properly', data);
-//   if (data.success) {
-//     window.alert('Answer is correct!!');
-//     window.location.href = '/pages/games/WIP'
-//   } else {
-//     window.alert('Incorrect answer!');
-//   }
-// } catch (error) {
-//   console.error('Error:', error);
-// }
