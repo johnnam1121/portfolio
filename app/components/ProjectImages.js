@@ -6,8 +6,22 @@ import Oneshot from '../assets/projectImages/Oneshot.png';
 import starcraft from '../assets/projectImages/starcraft.png';
 import TherapyAlliance from '../assets/projectImages/TherapyAlliance.png';
 import Youtube from '../assets/projectImages/Youtube.png';
+import kfest from '../assets/projectImages/kfest.png';
+import kashouston from '../assets/projectImages/kashouston.png';
 
 export const ProjectImages = [
+  {
+    src: kfest,
+    alt: "Korean Festival Website",
+    heading: "Korean Festival Website",
+    link: "https://www.kfesthouston.com/",
+  },
+  {
+    src: kashouston,
+    alt: "KASH Main Website",
+    heading: "KASH Main Website",
+    link: "https://www.kashouston.org/",
+  },
   {
     src: TherapyAlliance,
     alt: "Theapy Alliance Website",

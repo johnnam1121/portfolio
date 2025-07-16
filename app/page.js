@@ -101,8 +101,14 @@ export default function Home() {
     );
   } else if (score >= 500) {
     displayScore = (
-      <div>
-        <p className='flex items-center text-sm text-center mt-4 fixed left-1/2 bottom-5 transform -translate-x-1/2'>OK YOU WIN! HERE IS A COOKIE &nbsp;<FaCookie className='size-10 md:size-4'/> &nbsp; Goodbye~&nbsp;<button className='bg-secondary text-primary hover:bg-mainText duration-300 py-2 px-4 rounded'>Start over?</button></p>
+      <div className='z-50 relative'>
+        <p className='flex items-center text-sm text-center mt-4 fixed left-1/2 bottom-5 transform -translate-x-1/2'>OK YOU WIN! HERE IS A COOKIE &nbsp;<FaCookie className='size-10 md:size-4' /> &nbsp; Goodbye~&nbsp;
+          <button onClick={() => {
+            setScore(-1);
+            localStorage.removeItem('bubblesPopped');
+          }}
+            className='bg-secondary text-primary hover:bg-mainText duration-300 py-2 px-4 rounded'>Start over?</button>
+        </p>
       </div>
     );
   } else {
